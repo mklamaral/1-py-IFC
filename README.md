@@ -26,7 +26,7 @@ Sempre utilize ambientes virtuais para manter o sistema limpo:
 1. **Clone o repositório:**
    ```bash
    # Via HTTPS (Recomendado para a maioria)
-   git clone [https://github.com/mikaelamaral/1-py-IFC.git](https://github.com/mikaelamaral/1-py-IFC.git)
+   git clone https://github.com/mikaelamaral/1-py-IFC.git
 
    # Ou via SSH (Para quem já tem chave configurada)
    git clone git@github.com:mklamaral/1-py-IFC.git
