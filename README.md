@@ -5,7 +5,7 @@ Este repositório contém meus exercícios, projetos e anotações das aulas de 
 ---
 
 ## Tecnologias e Ambiente
-Para manter o desepenho no meu setup (Celeron + Lubuntu), utilizo:
+Para manter o desempenho no meu setup (Celeron + Lubuntu), utilizo:
 * **Linguagem:** Python 3.12+
 * **Editor:** VSCodium (Open Source VS Code)
 * **OS:** Lubuntu 24.04 (Minimal Installation)
@@ -22,7 +22,6 @@ Para manter o desepenho no meu setup (Celeron + Lubuntu), utilizo:
 ---
 
 ## Como rodar os exercícios
-Sempre utilize ambientes virtuais para manter o sistema limpo:
 1. **Clone o repositório:**
    ```bash
    # Via HTTPS (Recomendado para a maioria)
