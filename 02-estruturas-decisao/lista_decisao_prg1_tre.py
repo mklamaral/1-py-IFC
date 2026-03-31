@@ -128,3 +128,884 @@ else:
 
 # saída
 print(txt)
+
+"""# 8. Entrar com a idade de uma pessoa e exibir a mensagem; Maior de idade, menor de idade ou acima de 65 anos."""
+
+# 8. Entrar com a idade de uma pessoa e exibir a mensagem; Maior de idade, menor de idade ou acima de 65 anos.
+
+# entrada
+idade = int(input("Digite a idade: "))
+
+# processamento
+if idade >= 18 and idade < 65:
+  txt = f"Você tem {idade} anos, portanto é MAIOR de idade!"
+elif idade == 65:
+  txt = f"Voce tem exatos {idade} anos!"
+elif idade > 65:
+  txt = f"Você tem {idade} anos, portanto é ACIMA de 65 de idade!"
+else:
+    txt = f"Você tem {idade} anos, portanto é MENOR de idade!"
+
+# saida
+print(txt)
+
+"""# 9. Ler as notas da 1a. e 2a. avaliações de um aluno. Calcular a média aritmética simples e escrever uma mensagem que diga se o aluno foi ou não aprovado (considerar que se a nota for igual ou maior que 6 o aluno é aprovado). Escrever também a média calculada."""
+
+# 9. Ler as notas da 1a. e 2a. avaliações de um aluno. Calcular a média aritmética simples e escrever uma mensagem que diga se o aluno foi ou não aprovado (considerar que se a nota for igual ou maior que 6 o aluno é aprovado). Escrever também a média calculada.
+from IPython.core.display import clear_output
+# entrada
+n1 = float(input("Digite a primeira nota: "))
+n2 = float(input("Digite a segunda nota: "))
+
+# processamento
+media = (n1+n2)/2
+
+if media >= 6:
+  txt = f"Sua média foi {media}.\nVocê está APROVADO!!!"
+else:
+  txt = f"Sua média foi {media}.\nVocê está REPROVADO!!!"
+
+# saida
+clear_output(True)
+print (txt)
+
+"""# 10. Escrever um algoritmo para ler duas notas de um aluno e escrever na tela a palavra “Aprovado” se a média das duas notas for maior ou igual a 7,0. Caso a média seja inferior a 7,0, o programa deve ler a nota do exame e calcular a média final. Se esta média for maior ou igual a 5,0, o programa deve escrever “Aprovado”, caso contrário deve escrever “Reprovado”."""
+
+# 10. Escrever um algoritmo para ler duas notas de um aluno e escrever na tela a palavra “Aprovado” se a média das duas notas for maior ou igual a 7,0. Caso a média seja inferior a 7,0, o programa deve ler a nota do exame e calcular a média final. Se esta média for maior ou igual a 5,0, o programa deve escrever “Aprovado”, caso contrário deve escrever “Reprovado”.
+from IPython.core.display import clear_output
+# entrada
+n1 = float(input("Digite a primeira nota: "))
+n2 = float(input("Digite a segunda nota: "))
+
+# processamento
+media = (n1+n2)/2
+
+if media >= 7:
+  txt = f"Sua média foi {media:.2f}.\nVocê está APROVADO!!!"
+else:
+  #entrada caso a media for menor que 7
+  n3 = float(input("Digite a nota do exame: "))
+
+  # processamento
+  mediaFinal = (n1+n2+n3)/3
+
+  if mediaFinal >= 5:
+    txt = f"Sua média final foi {mediaFinal:.2f}.\nVocê está APROVADO PELO EXAME!!!"
+  else:
+    txt = f"Sua média final foi {mediaFinal:.2f}.\nVocê está REPROVADO!!!"
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 11. Escrever um algoritmo para ler a quantidade de horas aula dadas por dois professores e o valor por hora recebido por cada um. Mostrar na tela qual dos professores tem salário total maior."""
+
+# 11. Escrever um algoritmo para ler a quantidade de horas aula dadas por dois professores e o valor por hora recebido por cada um. Mostrar na tela qual dos professores tem salário total maior.
+from IPython.core.display import clear_output
+# entrada
+
+  #nomes
+nome1 = input("Digite o NOME do PRIMEIRO Professor: ")
+nome2 = input("Digite o NOME do SEGUNDO Professor: ")
+
+  #horas-aula
+hora1 = float(input("Digite as Horas-Aula dadas pelo PRIMEIRO professor: "))
+hora2 = float(input("Digite as Horas-Aula dadas pelo SEGUNDO professor: "))
+
+  #valores hora-aula
+valor1 = float(input("Digite o VALOR da Hora-Aula dadas pelo PRIMEIRO professor: "))
+valor2 = float(input("Digite o VALOR da Hora-Aula dadas pelo PRIMEIRO professor: "))
+
+# processamento
+salario1 = hora1*valor1
+salario2 = hora2*valor2
+
+if salario1 > salario2:
+  txt = f"O professor(a) {nome1} recebe R${salario1:.2f}\nEnquanto o professor(a) {nome2} recebe R${salario2:.2f}\n----\nPortanto o salario de {nome1} é MAIOR que o de {nome2}."
+elif salario1 == salario2:
+    txt = f"O professor(a) {nome1} recebe R${salario1:.2f}\nEnquanto o professor(a) {nome2} recebe R${salario2:.2f}\n----\nPortanto o salario de {nome1} e de {nome2} são IGUAIS."
+else:
+    txt = f"O professor(a) {nome2} recebe R${salario2:.2f}\nEnquanto o professor(a) {nome1} recebe R${salario1:.2f}\n----\nPortanto o salario de {nome2} é MAIOR que o de {nome1}."
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 12. Faça um algoritmo que leia um número inteiro e mostre uma mensagem indicando se este número é par ou ímpar."""
+
+# 12. Faça um algoritmo que leia um número inteiro e mostre uma mensagem indicando se este número é par ou ímpar.
+from IPython.core.display import clear_output
+# entrada
+n1 = int(input("Digite o número: "))
+
+# processamento
+pi = n1%2
+
+if pi !=0:
+  txt = f"O número {n1} é ÍMPAR!!!"
+else:
+    txt = f"O número {n1} é PAR!!!"
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 13. Ler o nome de 2 times e o número de gols marcados na partida. Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE."""
+
+# 13. Ler o nome de 2 times e o número de gols marcados na partida. Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE.
+from IPython.core.display import clear_output
+# entrada
+
+  #times
+time1 = input("Digite o nome do PRIMEIRO time: ")
+time2 = input("Digite o nome do SEGUNDO time: ")
+
+  #gols
+gols1 = int(input("Digite o número de GOLS do PRIMEIRO time: "))
+gols2 = int(input("Digite o número de GOLS do SEGUNDO time: "))
+
+# processamento
+
+  #saldo de gols
+saldoGol= gols1-gols2
+if saldoGol<0:
+  difGol = saldoGol*(-1)
+
+  # resultado (Ganhou/Empatou)
+if gols1>gols2:
+  txt = f"O time {time1} GANHOU do {time2} com um placar de {gols1}X{gols2}.\nnCom uma diferença de {difGol} gols."
+elif saldoGol == 0:
+  txt = f"Os times {time1}, {time2} EMPATARAM.\nPlacar {gols1}X{gols2}."
+else:
+    txt = f"O time {time2} GANHOU do {time1} com um placar de {gols2}X{gols1}.\nCom uma diferença de {difGol} gols."
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 14. Entrar com a sigla do estado de uma pessoa e imprimir uma das mensagens: “Carioca, Paulista, Mineiro ou Outros”"""
+
+# 14. Entrar com a sigla do estado de uma pessoa e imprimir uma das mensagens: “Carioca, Paulista, Mineiro ou Outros”
+from IPython.core.display import clear_output
+# entrada
+
+  #estado
+estado = input("Digite a SIGLA do estado: ")
+
+# processamento
+
+  #converte o conteúdo da variável em MAIUSCULO
+estado = estado.upper()
+
+  #verifica o estado e retorna mensagem
+if estado == "SP":
+  txt = "Paulista"
+elif estado == "RJ":
+  txt = "Carioca"
+elif estado == "MG":
+  txt = "Mineiro"
+else:
+  txt = "Outros"
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o valor da compra for menor que R$ 20,00; Caso contrário, o lucro será de 30%. Entrar com o valor do produto e imprimir o valor da venda."""
+
+# 15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o valor da compra for menor que R$ 20,00; Caso contrário, o lucro será de 30%. Entrar com o valor do produto e imprimir o valor da venda.
+from IPython.core.display import clear_output
+# entrada
+
+ #valor do produto
+valorProduto = float(input("Digite o valor do produto: "))
+
+# processamento
+
+if valorProduto > 20:
+  lucro = (valorProduto*0.45)
+  valorVenda = valorProduto+lucro
+  txt = f"O valor da venda, com um lucro de 45% (R${lucro:.2f}) deve ser: R${valorVenda:.2f}"
+else:
+  lucro = (valorProduto*0.30)
+  valorVenda = valorProduto+lucro
+  txt = f"O valor da venda, com um lucro de 30% (R${lucro:.2f}) deve ser: {valorVenda:.2f}"
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 16. Entrar com um número de 1 a 12 e exibir o mês correspondente."""
+
+# 16. Entrar com um número de 1 a 12 e exibir o mês correspondente.
+from IPython.core.display import clear_output
+# entrada
+mes = int(input("Digite o mês (1 a 12): "))
+
+# processamento
+  #Lista com todos os 12 meses
+list_mes = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+  #Processamento para chamar o index correto do mês referente. Ex: 0 = Janeiro
+mesIndex = (mes-1)
+
+# saida
+clear_output(True)
+print(f"O mês {mes} é {list_mes[mesIndex]}")
+
+"""# 17. Faça um algoritmo que verifique se uma letra digitada é vogal ou consoante."""
+
+# 17. Faça um algoritmo que verifique se uma letra digitada é vogal ou consoante.
+from IPython.core.display import clear_output
+# entrada
+letra = input("Digite UMA letra: ")
+
+# processamento
+  #Lista com todas as 5 vogais
+list_vogal = ["A", "E", "I", "O", "U"]
+  #Converte a letra digitada em maiúsculo
+letra = letra.upper()
+
+if letra in list_vogal:
+  txt = (f"A letra {letra} é uma VOGAL!")
+else:
+  txt = (f"A letra {letra} é uma CONSOANTE!")
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 18. Ler 2 valores (considere que não serão lidos valores iguais) e escrever o maior deles."""
+
+# 18. Ler 2 valores (considere que não serão lidos valores iguais) e escrever o maior deles.
+from IPython.core.display import clear_output
+from time import sleep
+# entrada
+y = True
+while y == True:
+  num1 = float(input("Digite o PRIMEIRO valor: "))
+  num2 = float(input("Digite o SEGUNDO valor: "))
+  if num1 == num2:
+    clear_output(True)
+    print("Os números são iguais, tente novamente!!!\n\n")
+    sleep(3)
+  else:
+    y = False
+
+# processamento
+if num1 > num2:
+  txt = f"O número {num1} é MAIOR que {num2}"
+else:
+  txt = f"O número {num2} é MAIOR que {num1}"
+
+# saida
+clear_output(True)
+print(txt)
+
+"""*texto em itálico*# Nova seção
+
+# 19. Ler 2 valores (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente.
+"""
+
+# 19. Ler 2 valores (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente.
+from IPython.core.display import clear_output
+from time import sleep
+# entrada
+y = True
+while y == True:
+  num1 = float(input("Digite o PRIMEIRO valor: "))
+  num2 = float(input("Digite o SEGUNDO valor: "))
+  if num1 == num2:
+    clear_output(True)
+    print("Os números são iguais, tente novamente!!!\n\n")
+    sleep(3)
+  else:
+    y = False
+
+# processamento
+if num1 > num2:
+  txt = f"Ordem crescente: {num2:.2f}, {num1:.2f}"
+else:
+  txt = f"Ordem crescente: {num1:.2f}, {num2:.2f}"
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 20. Ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles."""
+
+# 20. Ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.
+from IPython.core.display import clear_output
+from time import sleep
+# entrada
+y = True
+while y == True:
+  num1 = float(input("Digite o PRIMEIRO valor: "))
+  num2 = float(input("Digite o SEGUNDO valor: "))
+  num3 = float(input("Digite o TERCEIRO valor: "))
+  if num1 == num2 or num1 == num3 or num2 == num3:
+    clear_output(True)
+    print("Os números são iguais, tente novamente!!!\n\n")
+    sleep(3)
+  else:
+    y = False
+
+# processamento
+if num1 > num2 and num1 > num3:
+  txt = f"O número {num1} é MAIOR que {num2} e {num3}"
+elif num2>num1 and num2>num3:
+  txt = f"O número {num2} é MAIOR que {num1} e {num3}"
+elif num3>num1 and num3>num2:
+    txt = f"O número {num3} é MAIOR que {num1} e {num2}"
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 21. Ler 3 valores (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores."""
+
+# 21. Ler 3 valores (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
+from IPython.core.display import clear_output
+from time import sleep
+# entrada
+y = True
+while y == True:
+  num1 = float(input("Digite o PRIMEIRO valor: "))
+  num2 = float(input("Digite o SEGUNDO valor: "))
+  num3 = float(input("Digite o TERCEIRO valor: "))
+  if num1 == num2 or num1 == num3 or num2 == num3:
+    clear_output(True)
+    print("Os números são iguais, tente novamente!!!\n\n")
+    sleep(3)
+  else:
+    y = False
+
+# processamento
+if num1 > num2 and num1 > num3:
+  if num2>num3:
+    soma = num1+num2
+    txt = f"A soma dos dois maiores ({num1} + {num2}) é: {soma}"
+  else:
+    soma = num1+num3
+    txt = f"A soma dos dois maiores ({num1} + {num3}) é: {soma}"
+elif num2>num1 and num2>num3:
+  if num1>num3:
+    soma = num2+num1
+    txt = f"A soma dos dois maiores ({num2} + {num1}) é: {soma}"
+  else:
+    soma = num2+num3
+    txt = f"A soma dos dois maiores ({num2} + {num3}) é: {soma}"
+elif num3>num1 and num3>num2:
+    if num2>num1:
+      soma = num3+num2
+      txt = f"A soma dos dois maiores ({num3} + {num2}) é: {soma}"
+    else:
+      soma = num3+num1
+      txt = f"A soma dos dois maiores ({num3} + {num1}) é: {soma}"
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 22. Ler 3 valores (considere que não serão informados valores iguais) e escrevê-los em ordem crescente."""
+
+# 22. Ler 3 valores (considere que não serão informados valores iguais) e escrevê-los em ordem crescente.
+from IPython.core.display import clear_output
+from time import sleep
+# entrada
+y = True
+while y == True:
+  num1 = float(input("Digite o PRIMEIRO valor: "))
+  num2 = float(input("Digite o SEGUNDO valor: "))
+  num3 = float(input("Digite o TERCEIRO valor: "))
+  if num1 == num2 or num1 == num3 or num2 == num3:
+    clear_output(True)
+    print("Os números são iguais, tente novamente!!!\n\n")
+    sleep(3)
+  else:
+    y = False
+
+# processamento
+if num1 > num2 and num1 > num3:
+  if num2>num3:
+    txt = f"A ordem crescente é {num3}, {num2}, {num1}"
+  else:
+    txt = f"A ordem crescente é {num2}, {num3}, {num1}"
+
+elif num2>num1 and num2>num3:
+  if num1>num3:
+    txt = f"A ordem crescente é {num3}, {num1}, {num2}"
+  else:
+    txt = f"A ordem crescente é {num1}, {num3}, {num2}"
+
+elif num3>num1 and num3>num2:
+    if num2>num1:
+      txt = f"A ordem crescente é {num1}, {num2}, {num3}"
+    else:
+      txt = f"A ordem crescente é {num2}, {num1}, {num3}"
+# saida
+clear_output(True)
+print(txt)
+
+"""# 23. Faça um algoritmo que leia as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
+![image.png](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPIAAACDCAYAAAC3FkbAAAAABHNCSVQICAgIfAhkiAAAABl0RVh0U29mdHdhcmUAZ25vbWUtc2NyZWVuc2hvdO8Dvz4AAAAmdEVYdENyZWF0aW9uIFRpbWUAc2V4IDI3IG1hciAyMDI2IDA5OjQ3OjU4ghOjRwAAIABJREFUeJztnXlUVEfaxp/e6IVNFkEgQtgEY4QoRokxioooi6JRR6MhRIkYNclngtEYk5PRceJolIlOHHGimXFL3JVIZBz3fUkEUVRARSAKCLLZ0N309n5/kL6hQ4OAQDfN/Z1zz4Fbdeu+XV1v37pVbz3FISICCwtLp4ZrbANYWFieHdaRWVjMAL7uDw6HY0w7WFhYWoHuzZhv6CQLiynB4XDYtmmA+g/fLtG1lslkTabL5XKD57OzsxEWFoaampr2MIuFpc3oEo585syZJtPPnTvX4Fx6ejoGDx6Mo0ePIioqqtFr3377bXA4HKxduxYAkJqaiqlTpyIzM/PZjK6Hk5MTJBIJ0tPT26xMFjODfqPen2bFjBkzCAC5urqSXC7XS0tLSyMABIA2btzInE9OTiYAxOVyycbGhk6cONFo+a+++ioBoC+++IKIiCwsLAgADRo0qM0+AwASCoV04cKFNiuzM2GubfNZqV8vZv9Ezs/PBwAUFhYiJSVFL23z5s3M31VVVczfarUaADB9+nTk5eVh+PDhjZbP5+sNM+Ctt96ClZUV5s6d+8y26+DxeLCwsGiz8ljMD7N3ZC7394+YlJTE/K3VarFjxw4ADUfs7ezs0K1bN+zatQvDhg3DpUuXmLTa2lp8+eWXcHBwgFAoxOnTp/Wu9fDwgLu7O/NjoFarkZSUBDc3N4jFYgQEBOD27dtN2lxUVIRp06bBysoKEokEGo2mQZ5//etfcHV1hVAoRHh4OB4+fNjMGmExSww9ps2J0NBQpvvM5/OpvLyciIiOHTtGPB6P6UKvWrWKiIhOnTpFAoGAuQYAWVtbU0FBARERxcXFEYfD0UtHva51VFQUAaBFixYREVF0dLRePg6HQ87OzqTRaAzaq1Qqyd3dvUH51tbWTNf6r3/9K3G5XL30Pn36kFKpbM+qNBrm2jafFXSlrnV9NBoN9u7dCwDYtGmTwSfdjBkzoFar4ePjg1OnToHH40EqlWL58uUoKCjAjh07YGFhgS1btoCI0L9/f73r6/cAAMDe3h4CgQCXLl3CtWvXIBKJ8OTJExQXFxu0cevWrSguLoZYLEZ2djaUSqVeekVFBZYtWwatVovY2Fjm8+Tk5ODAgQOtrhuWzk2XcWRd93nDhg2ora1FcnIyuFyuXrc6Pz8fxcXFICLcvXsXISEhjLNfuXIF58+fh1arha2tLd566y0AgLW1dZP3XbduHYqKimBhYYE///nPkMvl4HA4Bn9EAOC///0vlEolpkyZgl69ekEgEIDH4+mla7VaAMCWLVswadIkAIBKpUJOTk4ra4els8N/ehbzYPz48Th06BAyMjKQlJQEhUKB5557DhYWFrh//z4AoLy8HAKBAHK5HMOHD2cGsjQaDQYNGoS8vDyoVCq4ubk1+76nT5/GokWLcPPmzWblv3PnDjgcDnr37m0wvaysjAmOGDVqFHNeo9HAy8ur2XaxmBddxpHt7OwwZMgQnDp1CvPnzwcAzJo1C1u2bGHydOvWDSqVChKJBOvXr2/gTImJieBwOKisrGTO/frrr43eUyqVYvLkyZDL5Xj++ecxefJkfPXVV03aKRQKQUR4/PgxAKCyshIajYbpsnfr1g08Hg9isRipqal6T2uWrkuX6VoDwJw5c5i/uVwu0z3W4enpCRcXFygUCiQmJkKr1eLw4cPw9fVFSUkJAgICIBKJUFhYiIyMDJw6dQq5ubmN3u/u3buMo928ebNZI8uDBg0Cj8fDli1bIJfL8eWXXwIA050OCwsDl8uFUqnEzp07oVAosG7dOgQHB3f5MEaVSoXjx4/jxx9/xJUrV0yiPj799FP07NmzwdRnm2NoBMycGDFiBAGgmTNnkkwmI6FQSAAoMDCQiIh69uxJAJhR6127dhGfzycOh8OMagOg7du3ExHRoEGDmJFu1Bs19vPzIyL9UeuSkhKSSCTE5XL18nM4HLK1taXa2toG9paWlpKlpSVxOBwmuER3JCQkEBFRfHx8g/sDoKysrI6o0g6nOW3z/PnzzHepO2xsbOjq1asdYGHj6GwZOnQoERHl5+fT4cOHKS0trU3K1mH2T+S+ffvC3t4eXl5eEIvFmDNnDlxcXLBo0SIAwIABA+Dg4ABnZ2cAwOTJk7FmzRoIBAJoNBoEBgYiJSUF06dPBwDs2bMHQ4cOhVarBZ/Px/Tp08HhcJj30z59+sDe3h7PPfccunfvjpSUFAiFQmi1Wrz88st49913QUSoqqrC3bt3G9jr6OiIlJQUuLq6QqlU4rnnnsP48eOZsoG6Ln5cXBxzTWRkJDIyMuDn59d+FWnClJaWYsyYMXjw4AEcHBwwZswYPPfcc3jy5Al8fHyYfFVVVcjKykJ1dXWjZSkUCmRnZ+u9PunQarW4e/euwZ6VRqNBTk4OioqK9M4nJSUhJCQEX3/9NQDgxx9/REREBBYuXNigDKlUiqysLL3gpGZjyLtZ6lCr1c1K02q1pFKpWl1Wc65Rq9Wk1Wr10rVabYNz5sjT2mZcXBzx+Xyytramx48fM+cLCwuZv1evXs3M/wsEAtq0aROTFh8f36B3w+Px6LvvvmPy3Lx5k/z9/Zn0F154gXJycoiI6OTJk9SjRw8mbeLEicx3N3HiRAJAK1eupC+++KLBfS5dukRERN9++y0Tv8Dlcunvf/97i+qFdWQWk+dpbbN79+7E5/Np4cKFBtMPHTrEvCbpgm34fD6dO3eOiIimTp2qFzTk4ODA/DAQEdXW1jLddnt7e7K3tycAdPr0abpz5w5JJBICQC4uLsThcIjL5TK2jBw5kgDQsmXLaMOGDQ0c+fLly3TmzBni8/l69vF4PDp8+HCz64V1ZBaTp6m2WV5eThYWFmRjY0OXL182mKdPnz7E4XDorbfeIiKi8PBwAkCvvfYaERG98cYbBIBCQ0NJq9XSlStXyMbGhjgcDhER/fDDD2RhYUGWlpZUWVlJarWaibKLi4tjnDIxMZGCgoKIz+eTpaUlEf0eWbhs2TIiIvrLX/5CAGjw4MGMfUOGDCEAFBkZSUREb775JnE4HOrbt2+z68Xs35FZzBuFQgE+nw8iMhicI5fLkZOTA7FYjPfffx8AMH/+fEgkEly5ckUvr5ubGzgcDjPVR7+Neh85cgRKpRLR0dGwtbUFj8fDK6+8AqBu2aqOjz76CFevXoVarUZNTU2T7+L1uXLlCiQSCTMt+sEHH0AikSArKwsKhaJZZXSZeWQW88Te3h4qlQpcLhfFxcUN5v5ramqYCD4nJycAdeu7+Xw+ZDJZoxF29Xn06BFz3R9RqVQQCoUYOHAgoqOj9dKaM8evVquhUqkgEomY8rt37w6gboq0pqYGIpHoqeWwjvyMpKamQiwWIyQkxNimdEmEQiG8vLyQk5ODDRs2NFhyamdnBy6XC41Gg2vXrsHd3R3Xrl2DQqGAg4NDs5zN19cXqampOH/+fIM0BwcHPH78GP369UNCQgKAOkUaDocDsVj81LL5fD7s7OxQXV2Na9euISAgANeuXYNGowGPx4OdnV2z6sHkutalpaUICwtDaGhoowsLTIX9+/dj4sSJGDNmDC5cuGBsc7osH374ISwsLJCcnIyvv/4aly9fxrp16/Dqq69CqVQiLCwMtbW1WLRoEdLS0vD5559DrVY3eII2RnR0NCQSCTIyMrBr1y6cPXsWw4cPR1paGj788EPw+Xxs3rwZFy5cwLZt22BpadloBJ+u215VVYWUlBRIpVJER0dDrVbjs88+Q3p6Oj755BPU1tYywT/NojkDCh3Jv/71L2bw4JtvvjG2OU1y6tQpEolEZGlpyQRjhIaGkr29faMDL6ZAYmIi2djY0IoVK4xtSrN4WtvUarU0cOBAZuS3/rF582YqKChgRpZ1h62tLZWWlhLR76PWsbGxRET0yy+/MPl0jB49ukEQzrx586i2tpacnZ0b3HfOnDlE9HtAkm6wa/v27XqBPps3b6aSkhKytbXVu14ikdCvv/7a7HoxOUd+5ZVXmA8zYMAAvbR//vOftGzZMpo3bx5FRUXR+PHj9SJkzp07R8uXL6d33nmHRo8eTTNmzKCKigoiqht5DA0NpejoaPrll1+IiOjSpUu0dOlSWrt2rd59duzYQX/5y1/o7NmzRET04MEDevfdd2nYsGH05z//mZ48eUJERNXV1RQfH08ffPAByeVyWr16NWN7eHi43lzlvn37KDw8nMLCwuiHH35gzufk5NDy5cvpo48+ovfee49CQkJo7ty5dPr0aVqwYAGNGjWKJk6cyKyHrn9dbGwshYSEUGJiIikUCiIiKioqouXLl9PHH39Mf/vb32jcuHE0ZswYOnToEBHVyRi5ubkRAHJ2dqbly5czn6ekpIRmz55NISEhtGTJEpLJZK38FtuW5rRNjUZD//znPykgIIB8fHxoypQplJqayqTfv3+fxo0bR76+vjR58mR6+PAhk7Zt2zaKjY1lvpeCggKaMWMGzZo1i8lTW1tLK1asIH9/f+rfvz9t3LiRiR0oLS2lN954g3x9fSkiIoLOnDnDXLdx40aKjY3Vm0qaN28e+fn50cSJEykzM5OI6trYpEmTyNfXl6Kjo+n+/fstqheTcuSKigq9XysLCwu9CX4rKyuDE/e6p9/y5csbpD958oRmz57d4Jq9e/dSRkYGEzKpe6JqNBrGhpSUFLp+/TqJxWK964ODg0mj0VBxcTFzrqysrMG9bW1tSS6X6/044beAhPXr1xPR7/pg9Q9DwgU9evRgfpROnDjR4Onz+uuvExHR1atXDZYnEono1q1bDYQOAFBBQQE9ePCAbGxs9M57eXkxPxDGxBTapiliso68detWsrCwIAcHB3JyciKBQECbN29m0p2cnIjD4dDLL79MqampFBoaShwOh1566SUi0nfkVatW0cqVKyk9PZ1EIhHx+Xxau3YtTZ8+nXg8Htna2pJCoSAvLy/icrn0+eefExHRzz//TBKJhAQCAUmlUvL29iYOh0OvvPIKHThwgMRiMfF4PNq0aRMVFxeTSCQioVBIZWVldOLECQJAIpGIxo8fT7t27aKioiImWGDXrl00fvx4PZuTk5NJJBIx0T/r168nS0tLAuritZOTk4nL5ZKlpSVdunSJVCoVdevWjbhcLo0dO5a2bdtGAoGA+Hw+paam0tWrVxmHnD9/PiUnJ5OdnR0TzXTr1i3q3bs3AXWChOvXryepVErR0dHE4XDIy8uLkpOTydramvh8Pi1durTjG8IfMIW2aYqYrCMPHz6c6ZaOGzeOANCQIUOYdCcnJxIKhbR7924iqusaW1lZkUAgoIqKCsaRX3nlFeaaTz/9VG9yvbKykkQiEYnFYjpx4gStWbOGeDwe9ezZk4jqZHQ4HA4FBwfTrVu3GCf74/Hmm282cGQiIltbWxKLxZSSksLY8NNPP5FUKqXCwkIaPXo08Xg88vf3J6I6RxaLxWRnZ0dExLzPCYVC5h1OKBSSlZUVnTp1io4ePdqoTUuXLtVzZB29evUiPp9PGzZsIKK6gAMAFBMTQ0REKpWKqZMff/yRiIiWLl1KPB6PfH192+rrbTWm0DZNkfr1YjKj1tXV1bhw4QK4XC5SU1Px448/gsvl4sqVK3pB5PUVPdzd3aHVamFhYdFooPnVq1dBRMwifFtbW3h4eECpVOLWrVt48803wePx8OjRI9y4cQPfffcdAOC9995Dbm4uM2ooEAiYA2jeHKEOa2trTJkyBa6urjhy5Eiz5i4bIzc3l7n+jzbpBP9ayoMHD8Dj8aDVavHqq68CAEJCQiAWi5GXl9dqW1k6DpOZRz58+DD4fD5qa2uZ+Te5XA4+n6+3+kir1TIRM5WVleBwOFCr1ZBIJAbLtbS0ZPLq0AUJSCQSODk5YfDgwTh9+jTmzZuH/Px8CIVCTJgwAZcvXwaXywWfz0d1dXUDSVpdoEBTnDt3DkOHDgVQN+cpEAieaecKiUQCLpcLOzs7lJeXN0hPS0trcZlisRhqtRpcLhdSqRT29vaQSqXQaDSsDG8nwWSeyFu2bEFNTQ2GDh0KmUwGmUyGkSNHQiaT4T//+Q+TT6lUYvv27QCAo0ePQqFQwNnZmYmG+SNjxoyBQCDAnj17oFAokJaWhsePH4PH42HIkCEA6p6+XC4XZ8+ehVqtRlRUFCQSCQICAqDRaMDn8xlhu7y8PHz00UfNXrT+008/AQCCg4MZJ2nutYYYOHAgOBwO5HI5s0PGzZs38dlnn7W6TGdnZ0YdRVfXSUlJkMvlCA4ObnW5LB2Iof52RyOXy5l3tK1btzLnv//+e+Z9sbq6mpycnPRGji0sLIjD4TBLvgy9I1dWVpKdnR1xOBzy8fEhW1tb4nA4NGzYMCZPbW0tM8/I5/Pp559/ZtLmzp1LHA6HxGIxDRw4kLl/amqqwXdkJycn4vP59Pzzz9PAgQNp1apVxOPxSCQSUZ8+fZjrRSIRfffddy1+RyYiioiIIKBu4Xy/fv2YMq9fv96sd+Q5c+YQAOrWrRt1796dHjx4QGvXriUej0dcLpeCg4OJw+EQn8+nkydPtuE33TqM2TZNmfr1YhKOfPDgQaYxVlVVMeelUilzfs+ePXqOrDvGjBlD1dXVRPS7I9cfICMiOnv2LDk6OjLX9OvXT28ekej3rWXqr0ohqpsjDA4OZq7VjXCr1eoG009ERCtWrNALHCguLqagoCC9KSnd33Z2dsxnFwqFRFTnyLp0nSPr/tc5cm5urt7aWLFYzMyF159+0uHr60sAGEfWjczr8qWkpJBWq9VbyQP8rppibFhHNkz9euH8dsKoW1cqlUooFArweDzmnVZHTU0NNBoNhEIh3N3dUVVVhY0bN6Jnz56wsbHBgAEDGpQjEAgaxLnKZDL8/PPPEIvFGDhwYAMbVCoV5HI5RCKRwffCK1euQC6X4+WXX2bex4kIUqkUAGBjY8PkvXz5Mvh8Pl544QWIxWLIZDJcu3YNHA4HwcHBKC8vR05ODvr27QuRSASZTAYulwsrKyu9Mq2trcHhcCCVSkFEsLS0ZAbZNBoNLl++DK1Wi4EDBzI268YQOBwOsxpIJpNBrVZDLBYzA2O5ubl4+PAhevfuDUdHR8b2u3fvoqCgAP7+/nB1dW3O19fusNuqGqZ+vZiEIzcXGxsbSKVS7N69G5MnTza2OSwdRGdom8agfr2YzGBXcwgJCYG3t3ejA1ssLF0VvScyCwtL50L3ROYbOsnCYkqwXWvD1H/4dqquNQsLi2FYR2ZhMQNYR2ZhMQPa1JEzMzPx0ksvwd3dnTlefvnlZl9fXV3d6sB/Fpb2Zs2aNejTp08D9U1ToE0XTahUKlRUVOCzzz5DUFAQADQ76L6srAxjx47Fxx9/jAkTJrSlWSwsz0x1dTV++uknFBUV4fjx4waDioxJm3etuVwuvL29ERQUhKCgIPTt2xdA3SbicXFxWLVqFaKiouDl5YVRo0YhKysLpaWlSEhIQFZWFr788ktGjTA/Px8zZ87EggULEBgYiPXr1wMACgsLMXv2bPj7+yMiIgJXr15t0qaDBw/itddeQ//+/ZGYmAilUtlo3n379iEkJAR9+/bF4sWLn7oPT0tsUavV2L9/PxISEjB+/HgcPXq01ffOzs7GtGnT4Ofnh0mTJiEzM7NJO1mejdu3b6OkpASxsbE4duzYM61gaw867B25urqakRSdO3cu9uzZg8ePH+PIkSOwt7fHrFmzYG9vj8jISEydOpW55vDhw8jOzsaKFSswYcIEVFRUICYmBhqNBqmpqejfvz9mz57dYPMsHRcvXsTixYvxwQcf4B//+Ad27NiBrVu3Gsx77NgxLFy4ENOmTcM333yDCxcuYPHixY1+ppbaotVqoVAoYGNjg4yMDL29lVty75KSErz99tuwtbXFtm3b0LNnT8TGxjZr21aW1nHmzBl0794d48aNw4MHD5CTk2Nsk/QxFIDdWtLS0qhHjx4UHBxMERERNGXKFMrOziYioszMTPL19aXTp08z+SdOnEhz584lIqKHDx/Siy++SDt37mTSDV2zc+dO8vDwoOPHj1Nubi6dPHmSPDw8aP/+/QZtWrx4MUVFRTGbaq1bt45GjhzZIJ9arabp06dTfHw8c+7o0aPMdqmGaKktOiorK2nw4MGMjFFL7/39999TQEAAs0nZ48ePKSgoiL799tsm79tZaYu2+SzI5XIaNWoULVq0iMrKymjAgAENBBuNQf16aXNhAR6Ph0GDBsHHxwcikQjdunVrNG9roskyMjLw5MkTvW0pHR0dGx0ky8/Px/PPP88sNvD398eGDRsa5Hvy5Anu3buHGTNmMOe8vLyatLGltjRGS+998+ZN9OzZkwlVtbOzg6enJ65fv96i+7I0jzt37uD27dsICQnBjRs34OTkhCNHjmD27NkQCoXGNg9AOyiECAQCjB07FiNHjmzrogHUDagFBQXh0KFDzdpKo3fv3jhx4gSqq6thZWUFoVBoUGpHrVZDrVbr7R8kFAqbHKxrqS2N0dJ7y+VyWFlZgc+v+/q4XC5sbGwgk8labQNL45w7dw6VlZXYvn07fvjhB8hkMiiVSty7dw8vvPCCsc0D0Annkb29vVFQUICysrJm5Z82bRq4XC5iYmIwb948vPfee7CysmqQz8bGBo6Ojrhx4wZz7tdff21yUKOltjRGS+/t6emJ3NxcVFRUAKgbS8jOztbb1JulbVAqlThy5AjGjh2LGzdu4MaNGzh69ChEIpFJ7S7S5o5MRKisrERxcTGKi4ubpWsFgNlo62m7zw0bNowZXAKAoqIiJCUlGdxhHqjroiYnJ+P999/HhAkT4ObmhoCAAAB1DrB27VqcPHkSQqEQ48ePx5EjR5Cfnw+1Wo19+/bB29u7zWxpjKfdu76dADBixAg8efKE+f/MmTMoKSnB6NGjW3Rflqdz//593LhxA1FRUczrmYeHBwYMGIDU1FTTiXsw9OLcWtLS0vSUOPCbHA2R4YGrSZMmMYNdCoWCpkyZQm5ubhQREdHoNUR1+tc9evSgPn36kLu7O/31r39lVEKaYseOHdS7d2+6ceMGEdUpZTg4ODA7ClRXV9O7775Ljo6O1LNnTwoMDKSMjIwmy2yNLX8c7Hravf9op+6zuLi4kJeXFzk5OentamFutEXbbC1btmwhX19funfvnt757du3k4+PD929e9dIlpmg1I8OlUpFmZmZVF5e/tS81dXVlJmZ2aydEGpra2n9+vXUq1cvve1aiOq2EqmpqdE7V1xcTLdv32ZGutvSlqfR2L0N2VlTU0PXr19v1o9YZ8YU2qYpAlOT+mlP7t+/j3fffRcFBQVYv349RowYYWyTWFqIubbNZ6V+vZiMrnV7YWFhgalTp+L111+Hra2tsc1hYWkXWIUQFpZOjMEnMtt9YTFF2K61YViFEBYWM4N1ZBYWM4B1ZBYWM4BVCGFheQrffvst3N3d4eHhgX79+mHOnDmNLlU1Fm3qyPUVQg4cOIADBw4w+w0/jbKyMoSFheHQoUNtaRILyzMjlUphZ2eHQ4cOITExEQUFBYiPj39qOHFHYvYKIQcPHkRkZKTe0dQWpKtXr2byRUVFMfHMjWFKaiUs7YdAIICbmxuGDx+OuLg45OTkNHsdQUdg9gohvXv3RkxMDHPY29sjPT3dYF6tVoszZ86gW7dumDNnDubMmYNevXo1+plMSa2EpWNQKpW4ePEiPD09TWvrIkNxm63FFBVC/sgHH3xA77zzjsG06upqCgkJocTExGaVZUpqJeZMW7TNZ2HNmjVka2tLw4cPJ3d3d/Lx8aG0tDSj2kTUxRRC6qPRaFBQUKC3FWt9ZDIZpFIpHBwc2sWW9lQrYWlfHB0dMW3aNFRVVeH06dOYNm0adu/ezbw6GhuzVwipz4MHD5CXl4d58+YZTFcoFJBKpdi4cSPOnj2LCRMmIDQ0tFGlDlNSK2FpX7p164YJEybAwcEB77zzDsLDw7Fnzx6TceRON4/8LKoc6enp4PF4ePHFFw2mSyQSzJo1C7NmzYKrqyvi4+Px1VdftZkt7alWwtJxCIVCiMXiJgcqOxqzVwjRoVPdGDRoEHr06AGgofKGg4MDFixYgLfffhtLly5FTEwMzp4922a2tKdaCUv7QkTQarXQarXYv38/srKyMGTIEGOb9TuGXpxbiykrhFy+fJl69epFFy5cYM4ZUt7QoVaracqUKRQTE9NkuaakVmKutEXbfBaSkpJIJBKRg4MDOTs7U/fu3Wn16tWkUqmMahe6mkKISqWiuLg4mjhxYoP8hpQ3iOoczd3dnVJSUtrUlvZWKzFHTKFt1tbWUmZmJqWnp5NUKjW2OURkwo7cXhw4cIC8vLzo0qVLTea7f/8+rVq1ikaPHk1ubm6UlJREGo2mzezIzc2lsLAw8vf3p+PHj7dZueaOObfNZwHtOf1kilRWVmLhwoUYNGhQk/lKS0tRVFSEP/3pT9i2bVubT/izaiUs7QWrEMLC0okhViGEpbPAKoQYhlUIYWExM1hHZmExA1hHZmFpAVqtFhUVFdBqtcY2RY8uoxCi1Wpx6NAhhIaG4tq1a+1yDxbzRalUYsWKFfD19YWXlxecnZ31FssYmzadfqqvEBIUFAQAzQ70Lysrw9ixY/Hxxx9jwoQJbWkW1Go1Vq5ciX//+9/429/+xoRFsrA0l9WrV2Pjxo345ptvEBERgfLychQWFhrbrN8xNLncWtLS0uj555+nY8eONUjLy8ujmTNn0sqVKykyMpI8PT0pNDSUbt++TSUlJRQbG0t2dnY0YMAA+uijj5hrZsyYQQkJCRQQEEDffPMNEdWtXY6Pjyc/Pz8KDw+nX375pUm7/vGPf9ALL7zAhEM2xd69e2nYsGH04osv0ieffEKVlZVN5m+JLQcOHKCIiAi9Y8mSJY3m/+qrr5h8kZGRdOLEiafab460Rdt8FvLy8sjPz4/WrFkPH+UjAAAJQklEQVRjVDv+SP16MXuFkLt372LDhg349NNPG131pKOlqhympFbC0n78/PPPkMlkCAsLM7YpjdLmjqxQKPDZZ58xDpmTk8OkWVlZISEhAREREQgKCoK3tzdycnLA4/Hg6ekJsViM3r17671X29jY4OOPP0ZERARcXV3xv//9D/fu3cO0adMAAKGhoXj8+DEuXbpk0J6zZ88iPz8fmzZtgp+fHwYPHozz5883yKfRaPCf//wHoaGhiI+Px7Bhw/D555/jxIkTjX7Wltri5+eHqVOnMoe9vT1cXV0N5pXL5ZBKpRgwYACioqIQGRkJNze3Rm1haT9+/fVXODo6wtnZ2dimNIrZK4TcunULYWFh2LlzJwAgMTERCxYswMWLF/XytUaVw5TUSljaD5VKBT6fDz7fdCOazV4hRCaTwdramhl0Cw0NxZYtWxrka40qhymplbC0Hy4uLqiqqkJ1dTXs7OyMbY5BOt08cktVOTw9PZGbmwupVAqg7r2WDIT7tUaVw5TUSljaj8DAQKhUqkbHM0wBs1cIGTp0KEpKSpCWlgatVovz58/D398fwLOrcpiSWglL++Hv749hw4Zh2bJlzJhPVVVVg9czo2JoKLu1mKJCiEajodWrVzP5AwMDGSnTtlDlMCW1EnOlLdrms/L48WOaOnUq2djYkI+PDzk6OlJsbKxRbYKpCgu0l0IIEVF5eTndvHmzgTxLW6hymJJaiTliCm1TR0VFBf3yyy9UVlZmbFP06kVvPTKxS8XanYMHDyIhIQHff/99k0IHeXl52LNnD44fP47MzEx8/vnnmDVrFrjcTjes8cywbdMw9evFdMfTzRRTUSthMS9YhRAWlk6MwScy231hMUXYrrVhWIUQFhYzg3VkFhYzgHVkFhYzoMsohJgSrFpJ56G2thZTp06Fu7s7PDw8EBwcjCVLljQ7YrGj6BIKIaYEq1bSuSAilJSUIDIyEvPnz0d2djZWr16N9PR07Nixw3QWURiKEmktpqoQouPixYs0adIkOnv2bKN52lMhhKh91UrMlbZom61FLpfT8OHD6ZNPPmHO3bhxgzw9PWnfvn1Gs4uoiymE6CgtLcXChQtx6NAhFBcXG8zT3goh7alWwtJx+Pr6wtfXF8eOHTO2KQxmrxAC1L2Tfv311xAIBPDz8zOYpyMUQtpTrYSl4xAKhXBxcWn0gWAMzF4hBKhzoIMHD+Lrr7/GkiVLDObpCIWQ9lQrYelYuFwus/G5KcS/m71CiFKpRFJSEl5//XUEBgY2mq8jFELaU62EpeNQq9V49OgR3N3dTcKJgU44j9xSVY4rV67g9u3bTPe3MTpCIaQ91UpYOo7c3FzcuXMHoaGhxjaFwawVQtRqNTZt2oShQ4fC29sbGo0GWq0WGo0GQMcrhLSnWglL+6PVapGeno4PP/wQHh4eGDFihLFN+h1DQ9mtxdQUQsrLy2nQoEF69gAgPp9PRB2vENLeaiXmSlu0zdaim34CQFwulzw8PGjWrFlUWFhoNJt0wFSFBdRqNbKzs+Hq6vrUifaamhrk5eXBx8cHQqGwWeWXlJRg3LhxWLx4MaKjowHULeB3cnKCRCJh8j169AgVFRXw9fUFj8d7arkttaWiogJFRUXo1auXnsRqW9hijphC2zRF6teLSTlye2PIkVlMn67QNltDl3VkjUaD+/fvw9nZWW9EmMW06QptszU0KvXDzlOymCps22waViGExeRhn8iGYRVCWFjMDNaRWVjMAFZYgIXlKdQXF6h/7Nmzx9imMbDCAiwsT4F+ExcYOXIk3nvvPea8p6enEa3Sp8271lwuF97e3ggKCkJQUBD69u0LAMjPz0dcXBxWrVqFqKgoeHl5YdSoUcjKykJpaSkSEhKQlZWFL7/8EgkJCcw1M2fOxIIFCxAYGIj169cDAAoLCzF79mz4+/sjIiICV69ebZZtly5dwuTJk3Hu3LlG8+zbtw8hISHo27cvFi9ejKqqqibLbIktW7duRWRkpN6xceNGJv3UqVMIDw+Hn58f5s+fj/Ly8ibrITc3F2+99RZ69+6Nt99+G3l5ec2qB5bW4ejoyLTroKAg2NvbG9skBlZYoB7tLSzQr18/xMTEICYmBkOGDMHFixchl8sBABcuXMA777yDSZMm4eDBg8jIyMDSpUuh0WgM1kN5eTlmzpwJCwsL7N27FwAwc+ZMVFRUPPW7YDFDDMVttpa0tDTq0aMHBQcHU0REBE2ZMoWys7OJyHDc9MSJE5lY64cPH9KLL75IO3fuZNINXbNz507y8PCg48ePU25uLp08eZI8PDxo//79jdql0Wjo008/pREjRlBAQADt2bOnQR61Wk3Tp0+n+Ph45tzRo0fJz8+v0XJbYwtR3UZg4eHhFBERQU+ePCGNRkMxMTE0evRoysrKotzcXFq1ahX5+/vTgwcPDNbD3r17ycfHh+7cuUNERLdv3yYvL6+n3rsz0hZt81nQxVv7+PhQREQERURE0O7du41qE5F+vbDCAr/REcICQF102cqVK3H79m0kJyfD2toaFRUVyMrKQnl5OaZPn87k7dmzZ6Orwa5duwY3Nze4uLgAAFxcXODi4oLr16+zYwzthKenJ8LDwwHUtQ1TghUW+I2OEBYAgNTUVGzatAkrVqxgFDR1Syvff/99/N///V+Da27evNngnEwmg6WlJbNIQyQSwdLSEjKZrFl2sLScwMBAvcEuU6LTzSN3ZmGBR48eYenSpYiIiEBMTAxz3traGi4uLkhPT29WOUCdANz9+/dRUlLClK1bgcXS9WCFBTpIWECr1WLdunWQyWRYsmQJeDwe1Go1NBoNLCwsEB0djQsXLuDWrVsA6ga/du/e3ei9R4wYASLCkSNHAABHjhwBj8czrcXuZoZMJmPadXFxMaqrq41t0u8YenFuLaywQOO2VFZW0uDBgxvY0r9/fyIiqqmpobi4OHJ2diY/Pz/q168f/fTTT03Ww759+8jd3Z38/f3J3d2dDhw40KStnZW2aJvPQn1xgfpHfa1rYwBWWMC4wgJNUVhYCLlcDk9Pz2YJuykUCty7dw/e3t7Nfk/vbJhC2zRFuux6ZFZYoHPSFdpma+iyjswKC3ROukLbbA1d1pFZOids2zQMqxDC0ulg22bTMI7M/uKxsHReOl1ACAsLS0P+H68J/JMhfPOHAAAAAElFTkSuQmCC)
+#O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
+"""
+
+# 23. Faça um algoritmo que leia as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média.
+# A atribuição de conceitos obedece à tabela abaixo: O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
+from IPython.core.display import clear_output
+
+# entrada
+n1 = float(input("Digite a nota UM: "))
+n2 = float(input("Digite a nota DOIS: "))
+
+# processamento
+media = (n1+n2)/2
+
+if media >= 9 and media < 10:
+  txt = f"Nota 1: {n1} || Nota 2: {n2}\nMedia: {media}\n------\nConceito A\nAprovado!"
+elif media >= 7.5 and media < 9:
+  txt = f"Nota 1: {n1} || Nota 2: {n2}\nMedia: {media}\n------\nConceito B\nAprovado!"
+elif media >= 6 and media < 7.5:
+  txt = f"Nota 1: {n1} || Nota 2: {n2}\nMedia: {media}\n------\nConceito C\nAprovado!"
+elif media >= 4 and media < 6:
+  txt = f"Nota 1: {n1} || Nota 2: {n2}\nMedia: {media}\n------\nConceito D\nReprovado!!!"
+elif media >= 0 and media < 4:
+  txt = f"Nota 1: {n1} || Nota 2: {n2}\nMedia: {media}\n------\nConceito E\nReprovado!!!"
+
+# saida
+clear_output(True)
+print(txt)
+
+"""# 24. Escrever um algoritmo para ler dois valores e uma das seguintes operações a serem executadas (codificadas da seguinte forma: 1 – Adição, 2 – Subtração, 3 – Multiplicação e 4 – Divisão). Calcular e escrever o resultado dessa operação sobre os dois valores lidos."""
+
+# 24. Escrever um algoritmo para ler dois valores e uma das seguintes operações a serem executadas (codificadas da seguinte forma: 1 – Adição, 2 – Subtração, 3 – Multiplicação e 4 – Divisão).
+# Calcular e escrever o resultado dessa operação sobre os dois valores lidos.
+from IPython.core.display import clear_output
+# entrada
+num1 = float(input("Digite o primeiro valor: "))
+num2 = float(input("Digite o segundo valor: "))
+operador = int(input("\nEscolha o operador:\n1 – Adição\n2 – Subtração\n3 – Multiplicação\n4 – Divisão\n"))
+
+# processamento
+if operador == 1:
+  soma = num1+num2
+  resultado = soma
+elif operador == 2:
+  subtracao = num1-num2
+  resultado = subtracao
+elif operador == 3:
+  multiplicacao = num1*num2
+  resultado = multiplicacao
+elif operador == 4:
+  divisao = num1/num2
+  resultado = divisao
+
+# saida
+print(f"----\nO resultado da operação é: {resultado:.2f}")
+
+"""# 25. Faça um algoritmo para calcular as raízes reais de uma equação quadrática: ax2 + bx + c = 0. Uma equação quadrática só tem raiz reais se (b2 - 4ac) for maior ou igual a zero. O algoritmo deverá informar as seguintes situações:
+# • Se o delta calculado for negativo, a equação não possui raízes reais. Informe ao usuário e encerre o programa;
+# • Se o delta calculado for igual a zero a equação possui apenas uma raiz real, informe-a ao usuário;
+# • Se o delta for positivo, a equação possui duas raiz reais, informe-as ao usuário.
+"""
+
+# 25. Faça um algoritmo para calcular as raízes reais de uma equação quadrática: ax2 + bx + c = 0. Uma equação quadrática só tem raiz reais se (b2 - 4ac) for maior ou igual a zero. O algoritmo deverá informar as seguintes situações:
+# • Se o delta calculado for negativo, a equação não possui raízes reais. Informe ao usuário e encerre o programa;
+# • Se o delta calculado for igual a zero a equação possui apenas uma raiz real, informe-a ao usuário;
+# • Se o delta for positivo, a equação possui duas raiz reais, informe-as ao usuário.
+import math
+# entrada
+print("Ax^2 + Bx + C = 0")
+a = int(input("Digite o valor de A conforme a fórmula acima: "))
+b = int(input("Digite o valor de B conforme a fórmula acima: "))
+c = int(input("Digite o valor de C conforme a fórmula acima: "))
+
+# processamento
+delta = ((b**2)-(4*a*c))
+if delta >= 0:
+  if delta == 0:
+    x1 = (-b+math.sqrt(delta))/2*a
+    txt = f"----\nDelta = 0.\nÚnica raiz real: {x1}"
+  else:
+    x1 = (-b+math.sqrt(delta))/2*a
+    x2 = (-b-math.sqrt(delta))/2*a
+    txt = f"----\nDelta != 0.\nRaízes reais:\nx': {x1}\nx'': {x2}"
+else:
+  txt = f"----\nO delta é negativo, a equação não possui raízes reais!"
+
+# saida
+print(txt)
+
+"""# 26. Faça um algoritmo que leia 3 valores a, b, c, e verifique se podem ser os comprimentos dos lados de um triângulo. Em caso afirmativo, verifique se é “triângulo equilátero”, “triângulo isósceles” ou “triângulo escaleno”. Em caso negativo, escreva uma mensagem: “os valores lidos não formam um triângulo”. Considere que:
+# • o comprimento de cada lado de um triângulo é menor que a soma dos comprimentos dos outros lados
+# • um triângulo equilátero tem três lados iguais
+# • um triângulo isósceles tem dois lados iguais e um diferente
+#• um triângulo escaleno tem três lados diferentes.
+"""
+
+# 26. Faça um algoritmo que leia 3 valores a, b, c, e verifique se podem ser os comprimentos dos lados de um triângulo. Em caso afirmativo, verifique se é “triângulo equilátero”, “triângulo isósceles” ou “triângulo escaleno”. Em caso negativo, escreva uma mensagem: “os valores lidos não formam um triângulo”. Considere que:
+# • o comprimento de cada lado de um triângulo é menor que a soma dos comprimentos dos outros lados
+# • um triângulo equilátero tem três lados iguais
+# • um triângulo isósceles tem dois lados iguais e um diferente
+#• um triângulo escaleno tem três lados diferentes.
+
+# entrada
+a = int(input("Digite o valor do lado A: "))
+b = int(input("Digite o valor do lado B: "))
+c = int(input("Digite o valor do lado C: "))
+
+# processamento
+if a < (b+c) and b < (a+c) and c < (a+b):
+  if a == b and b == c:
+    txt = f"---\nTriângulo equilátero"
+  elif a == b or b == c or a == c:
+    txt = f"---\nTriângulo isóceles"
+  else:
+    txt = f"---\nTriângulo escaleno"
+else:
+  txt = f"Os valores lidos não formam um triângulo"
+
+# saida
+print(txt)
+
+"""# 27. Escreva um algoritmo que leia 4 valores (opção, a, b, c), onde opção é um valor inteiro e positivo e a, b, c são quaisquer valores reais. Escreva os valores lidos da seguinte maneira:
+# se opção = 1 -> escreva os 3 valores a, b, c em ordem crescente
+# se opção = 2 -> escreva os 3 valores a, b, c em ordem decrescente
+#se opção = 3 -> escreva os 3 valores de forma que o maior valor entre a, b, c fica entre os outros 2.
+"""
+
+# 27. Escreva um algoritmo que leia 4 valores (opção, a, b, c), onde opção é um valor inteiro e positivo e a, b, c são quaisquer valores reais. Escreva os valores lidos da seguinte maneira:
+# se opção = 1 -> escreva os 3 valores a, b, c em ordem crescente
+# se opção = 2 -> escreva os 3 valores a, b, c em ordem decrescente
+#se opção = 3 -> escreva os 3 valores de forma que o maior valor entre a, b, c fica entre os outros 2.
+
+# entrada
+opcao = int(input("Digite uma opção (1 a 3): "))
+a = float(input("Digite o valor de A: "))
+b = float(input("Digite o valor de B: "))
+c = float(input("Digite o valor de C: "))
+
+# processamento
+if opcao == 1:
+  if a > b and a > c:
+    if b>c:
+      txt = f"Ordem Crescente: {c}, {b}, {a}"
+    else:
+      txt = f"Ordem Crescente: {b}, {c}, {a}"
+  elif b > a and b > c:
+    if a>c:
+      txt = f"Ordem Crescente: {c}, {a}, {b}"
+    else:
+      txt = f"Ordem Crescente: {a}, {c}, {b}"
+  elif c > a and c > b:
+    if a>b:
+      txt = f"Ordem Crescente: {b}, {a}, {c}"
+    else:
+      txt = f"Ordem Crescente: {a}, {b}, {c}"
+elif opcao == 2:
+  if a > b and a > c:
+    if b>c:
+      txt = f"Ordem Decrescente: {a}, {b}, {c}"
+    else:
+      txt = f"Ordem Decrescente: {a}, {c}, {b}"
+  elif b > a and b > c:
+    if a>c:
+      txt = f"Ordem Decrescente: {b}, {a}, {c}"
+    else:
+      txt = f"Ordem Decrescente: {b}, {c}, {a}"
+  elif c > a and c > b:
+    if a>b:
+      txt = f"Ordem Decrescente: {c}, {a}, {b}"
+    else:
+      txt = f"Ordem Decrescente: {c}, {b}, {a}"
+elif opcao == 3:
+  if a > b and a > c:
+    if b>c:
+      txt = f"Maior entre os outros 2: {c}, {a}, {b}"
+    else:
+      txt = f"Maior entre os outros 2: {b}, {a}, {c}"
+  elif b > a and b > c:
+    if a>c:
+      txt = f"Maior entre os outros 2: {c}, {b}, {a}"
+    else:
+      txt = f"Maior entre os outros 2: {a}, {b}, {c}"
+  elif c > a and c > b:
+    if a>b:
+      txt = f"Maior entre os outros 2: {b}, {c}, {a}"
+    else:
+      txt = f"Maior entre os outros 2: {a}, {c}, {b}"
+else:
+  txt = f"Opção digitada é invalida, tente novamente!"
+
+# saida
+print(txt)
+
+"""# 28. Uma empresa decidiu conceder um aumento de salário a seus funcionários de acordo com a tabela:
+![image.png](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAACjCAYAAAAnzrMFAAAABHNCSVQICAgIfAhkiAAAABl0RVh0U29mdHdhcmUAZ25vbWUtc2NyZWVuc2hvdO8Dvz4AAAAmdEVYdENyZWF0aW9uIFRpbWUAc2V4IDI3IG1hciAyMDI2IDExOjQxOjE22+laYQAAIABJREFUeJztnXdYFNf6x7+wdFCxS5elWoEgYiyoxBITNOpVsURRxF6uxmjiT4UQjTVFY0zEblCixgKoKCixIVFsgCUisiA2QMpe6rLs7vv7g8tcl7Isywqo5/M8Po/Me+bM2ZnZd2fOnPMZDSIiMBgMRhNCs7EbwGAwGJVhiYnBYDQ5WGJiMBhNDpaYGAxGk4MlJgaD0eTQqrxAQ0OjMdrBYDDeI2obDFAlMbHRA4x3HQ0NDbWd5/Hx8fDw8EBBQQF2794NX19ftdT7vsNu5RgMFQkLC4O7uzsKCwuho6MDW1vbxm7SOwNLTAyGimzfvh1isRiffPIJ0tLS4OHhoVI906ZNw6BBg3Dr1i0AwN9//43du3dDIpGos7nVcuPGDQwaNAjTp09/49uqCxps5DfjfUNdt3I5OTnw8vICj8fDggUL4O3trVI92trakEgkCA8Ph7OzM2xsbKCpqYmvvvoKgYGB9W6nIkJDQzFq1Cjo6upCJBK90W3VBXbFxGCoSOvWrSEWi3H16lU8ePBA5XqMjIygr68PAGjWrBmMjY0hk8nQvXt3dTVVIXp6ejA0NGyQbSkLS0wMRj3Q1taW+/vw4cNYunQpFi5ciAkTJqBHjx6YNGkSnj59ypUhIuzbtw99+vRBjx49IBQKuZixsTHmzZuH8ePHw9HRkVuemJiITz75BD169IC/vz9yc3O52KVLlzB06FC4ublh69attd4Cvnz5En5+fnB1dcXEiRMhk8nk4lKpFHv37kXv3r0xYMAAnDlzRqV9Uy+IwXjPUOdp7+7uTgDI39+fiIi8vLwIQJV/ffv25dYZNWoUaWhoyMX19fUpPDyciIhatGhBAOjYsWNERHThwgXS1NSUKz9gwAAiItq2bVuVuubOnVtje9PS0khfX79K+1q1asWVGTFihFxMU1OTQkND1bbPlIFdMTEYakRTs/wr1aFDB/zxxx/YtGkTDAwMcOPGDQDA1atXcebMGfB4PAQFBSEuLq7K2EEDAwPo6upyf/v4+AAARo8ejWvXrmHSpEn4+eefkZGRgSVLlkBDQwNLly7Frl27wOPxsGvXLiQmJlbbvgULFkAkEsHW1hZXrlzBsmXLoKenx8VDQ0MREREBbW1thISEwM/PDxoaGpg0aVKDDiWqMo6JwWDUnzFjxmD8+PGIiYmBpqYmysrKAABnzpyBSCSCm5sbZs6cCQBo0aIFSktLq63n8ePHyMzMhLa2Nn755ReYmJjA3d0dABAUFISysjLIZDJs2rSJW4eIEB8fX20fVXR0NPT09LBp0yb07dsX2dnZ+Pnnn7n4nj17uFvBiRMncstFIhHS09NhZWVVzz2jHCwxMRgNSMWQgA8//FCp8g8fPoSmpiZ0dHRgYmIiF0tNTYVUKgUAtGnThlteXFxcbV1ZWVmQyWTg8XhwcXGptkxKSgr31PL1OktKShr0qR1LTO8AUVFRaNeuHZydnRu7KYxaqLhtq/iSExGEQmGNT8X09PSgqakJkUgEiUQCLa3/fWWbN28ODQ0NODo6KvVUsGLbGhoa3BVaQUEBl9wAwNDQEESEJUuW4Pvvv1ftQ6oB1sfURHn16hXi4uIQFxeHW7duyT2FeZ3o6GgMHToUH3/8sdyTH0bTxNHRETweD6GhoZDJZAgNDQVQ81Swnj17oqysDDweD3/++SeA8iulv//+G/369YOenh4EAgGSk5MBlP9I+fv7V1tXq1atAABisRhhYWEAgJ9++om7zQSAjz/+GFpaWvj9998hkUggk8nw008/4ejRo+rZAcrSoF3tDKX57bffqjw5cXNzo5SUFCIikslk5OPjU+WJzObNmxu55U0fdZ72lZ/KVTzRmj9/PhERXblyhYyMjEhbW5uIiF6+fEkGBgbE4/HI1tZW7snXsmXLiIjIxMSEdHV1uadyn3/+OWlqapK2tjY5OTkRANLT06OysjJycnIiDQ0NMjY2JgsLC66+rKysatv77bffEo/HIx0dHXJwcODKa2hoUEpKCuXl5ZGBgQFpamqSlZUVGRoaEgDq2LGj2vaZMrArpnogkUhw5coVXL58We5yuLS0FEKhEAUFBbh//z4iIyORmZkJAEhOTkZ0dDTu379fa/0VY2RsbW2ho6ODmzdv4sMPP0RZWRkuXryIQ4cOyV3aA4C5ubkaPyGjNiqewlVQcTx4PB63rLCwkLsq6dChA4KCgqCtrY3Hjx9zdchkMu72TiwWy3WGb9u2DUOHDkVZWRkSEhKgqamJlStXgsfjISQkBHw+H0KhEE+fPoW1tTVOnjyJtm3bVtvepUuX4qOPPoJYLEZSUhKMjY0BlF+xaWpqwtjYGCEhITAwMMCTJ09QVFQEDw8PREREqGmPKUmDpsF3iGvXrlG7du24XxwzMzN69uwZEZX/KqHS1Y6WlhYZGRnJLdu5c2eN9f/222+kra1NHTp0ICKihIQE0tPTIwMDAzpx4gT9+OOPxOPxuF/Jvn37kkAgIJlM1iCf/21G3ad95X1e299ERLm5uXT9+nV6+fIlERHduXOHcnNzFa6TnJxMcXFxVFJSIrdcLBbT7du36f79+0q3+Z9//qGbN29SWVkZCYVCun37tlxcKBTSjRs3KD09Xek61QlLTCrw6tUratmyJQEgGxsbat++PQGg7t27k0wmk0tMfD6frKysiMfjEQCysLCgrl27kra2NmloaJBUKq12G5UTE1H5wDs9PT3av38/hYeHk56eHunp6VUZwMdQDPs9bvqwWzkVOHDgAPLz8wEAH330ETeuJDk5GWlpaVw5JycnpKSkYOvWrdDR0YGBgQHS09MRHh4OXV1daGtro6CgQOG2RCIRxGIxNm3ahNLSUmhoaMDW1haffvopXF1duVvIhIQE7lE0g/G2w4YLqMDp06e5hLBjxw5ueUlJCZ4/f879bWRkJLeejo4O93/671MYqmU0rVAo5B4Za2hoYMiQIejduzcA4MKFC5gzZw52796NgoIC9O/fH2fOnEG/fv3q9wEZjEaGJSYVqJj02L17d6xYsUIuZm9vjwsXLqh1e1paWigrK4OzszMOHTrELdfW1saOHTuwe/duAEBRURH8/PyQlJSk1u0zGA0NS0wqYGNjgwsXLkAmk2HcuHEAykfb5uTkoF27dmrdVqtWrWBpaYnExESkpKTgyZMn6Nq1a5VyGhoaMDIygkAgUOv2GYzGgPUxqcCiRYugo6ODpKQkbN26Fb/99hsMDQ0xfPhwtW9LR0cHFy5cQMeOHVFYWIj+/fsjNTUVBQUFaN++PVatWgWg/JawqKioxsfEjDdPaGgo/P39uQm7DNVhiUkFOnfujE8//RRSqRQLFy7E3LlzAZRfSb3eZ/T62KaSkhIUFhZyfxcVFUEsFivcTllZGUpKSmBsbIyYmBi0a9cOubm58PDwwKlTp5CVlYW1a9dy5Xk8Ho4fP66uj8moA2KxGGPHjsXq1auxaNGixm5OrSQmJmLcuHHcD1tTg93KqcjRo0fx66+/IiwsDCYmJliwYAF69OgBAPD09ISWlhYnp+/UqRPWrl2L5s2bAyi/PatIKBXmwsq4u7tj7dq1aN26NQDAxMQEV69exZEjR9CyZUtMmDAB7du3R3BwMPbt2wcjIyOcP3+ee0LIaFiio6O5H6IbN25AKBRygxeTkpKQlpYGU1NTdOvWDcXFxbhy5QoAYNCgQSAiREdHAyj/AUtKSoKhoSHGjBmDhw8f4tatW5BKpRg3bhw6duzIbZOIEBYWhrt376JTp04YPXo0N+AzOjoaEokE+vr6uH//PrKzszFw4ED07dsXz549w65du7gpLn379oWTkxM6dOgAADh//jyuXbsGU1NTTJ48uYoMr0FozLEKjPojk8lo6tSp9PPPPzd2U94a3sRpP2HCBG7sGo/Ho99//52LLViwgADQZ599RkREjx494soWFBRQbm5ulQG5lacaAaA2bdpQamoqEREVFxeTs7OzXLx///7cwMzK6wIgXV1dOn/+PAUFBVWJHTx4kIjKp7+8vrxjx46Uk5Oj9v1VG+xW7i1HQ0MDe/fuxYIFCxq7Ke8tUqkUJ0+ehK6uLmxtbSGVSrFv3z4uTtUMDTEyMpKbTlQxlKRTp05YtWoVtLW1oaGhAQsLCwQGBsLY2Bi5ubncpN8FCxYgMTERzZs3x7fffgs9PT1cuXIFmzdvBgBu/datW2Px4sVwcHBAaWkpduzYgd69e8Pd3Z3bpre3N2xsbBAeHo4jR46Ax+Nh+fLlaNOmDZ48eYL58+e/0f1XLQ2eChmMRkbdp310dDQZGhqSjo4OHTt2jAwMDEhXV5cKCgqIiGj+/PkEgEaMGEFE5VdMRkZGpKWlxV0x6ejokKGhIQkEAiIiat26Nenp6dHx48eJiKh3794EgNasWUOlpaWkr6/P6Xa7devGXeF4eHgQEZG2tjYZGRnRxYsXieh/V20VbQgODiYdHR0yNzfnPsfgwYMJAI0dO5aIiI4ePUr6+vqko6NDpaWlat1ntcGumBiMenLw4EHuYYaPjw+Ki4vB4/FUmvhaWbNbGSKCQCCAlpYWN57u7t27XDwjI0Ou/OuTiQFUefHA69y+fRt6enrcEBgvLy+UlpZCV1cXDx8+rNPnqC+s85vBqAdEhGPHjoHH40EqlaKoqAhA+bi2/fv3c19ydaKjowMiAo/HQ2xsLNdpXRFTF7UlyTcJu2JiMOpBbGwspFIptLW1ERUVheTkZKxevRr6+vr466+/qtXR1ldRa2JiAplMBi0tLdy9exeWlpYwNzfHpUuX6jXA94MPPoBIJMLhw4cBACdPnoSOjg7EYrHcq6QaApaYGIx6EBISgqKiIlhYWGDw4MGwsbHBvHnzOLd2ZGQkmjVrBgCIi4vD/Pnz0bdvXxQWFkImkyEvL6/O29TX18fcuXNRVlaGJUuWYPny5bC1tcWUKVPkpiwpQkdHBxoaGsjOzoafnx+uXLmChQsXQkdHBydOnMCSJUswc+ZMlJaWYuzYsWq9ElOKBu3RYjCaAOo87fHfTue1a9fKLe/Xrx8BoNGjR9ODBw+quLgq/p0+fVpuuEDFcICKd79V7vxevXo1EZWrd/h8vlxd3bt35wynFcuuXLlCREQLFy6U6/wWCARybZozZw4REfn6+srVaWtrS3l5eWrbX8qi8d8PwWC8N1S8BaS+lJWVISYmBgDg4uLCDagEgLS0NKSmpsLQ0BA9e/ZEQkICoqOjoa2tjWHDhkEsFuPcuXP497//zZlQgfK3p+jp6eHatWsoKSlBt27d0KZNG9y9exfZ2dng8/ncK5TEYjEOHjyInJwc9O7dm7NOAOCsqh988AFatGiBlJQUpKeno0OHDujUqRMAID4+HufPnwefz8ewYcO4wb5XrlzhBliOHz++Sgd6Q8ASE+O9Q12JifHmYH1MDAajyVFluEBjPiJkMBoKdp43LrVdsVZJTOwSl/Guw27lmj7sVo7BYDQ5WGJiMBhNDpaYGIy3nKKiIkgkEu5vsViscE7c20CjJabz58/jwIEDb/0OZDAaC5FIhHnz5sHKygrW1tYYPHgwhgwZAisrK2zdurWxm1cv3mhiKigogJeXFzf3poLTp0/Dx8cHUVFRKC4urnH94uJirFu3DmFhYW+ymQzGW0lsbCzu3buH+/fvY8uWLSgoKMB3332Hzp07o3///o3dvHrxRu0CMpkM2dnZKCkp4ZbFxsZi6dKlWL58OWbOnKlwDk5BQQGioqIgEonw2Wefqa1dUqkUV69ehaWlpZyqlMFoLOLj4xEWFoYHDx6gU6dO+Oabb7jY1atXsWHDBk7d++GHH2LlypXg8XiQSCQQiUQoLi5GixYtIBAI0Lx58wafdKtuGlx70rNnT9y4cQOGhoa1lm3fvr1a39EmlUoRERGBoKAg2NjYYPny5Wqrm8GoDyKRCLq6uhAKhbh16xZkMhnn705KSkJycjK+/fZb6Ovrc5qTXr16oU+fPnB2dkbr1q2xbds2HDlyBEOGDIGenl5jfpx6o9StnEwmQ3BwMNzc3MDn8+Ht7S33UsVz587By8sL1tbWGDt2rNxrsitz4cIFeHt7VykrlUqxatUqLFmyBIMHD8a4ceOQn5+PVatWyc2YFggEmDJlCjp16oSpU6cq3FYFEokER48exfDhw3Hp0iVs27YNW7ZskfPY1PS5f/nlF/j5+eHVq1cAyjsaAwIC4OTkhL59+yIkJITrJ1MUq45jx45hwIAB6NatG5YvX47//Oc/SsUY7x69evXC119/jQ8//LBK7NWrVzA1NcXw4cPh5eXFvfRCV1cXGzduRHZ2Nh49egR7e3skJydj4MCBDd189aPMTN+4uDgyNzenXbt20bNnz2jLli0UHBzMxQYOHEiHDx+ma9eukbOzMy1evJiIiIRCIbm7u9PevXtrLVtWVkZDhgwhPp9P+/fvp/j4eG5ZxYzqnJwc6t+/P02fPp3u3btHPj4+NHDgQMrNza223SKRiA4cOEAff/wxrVy5kl68eFGnGc5//fUXtWnThuzs7Cg9PZ2IiJYuXUru7u50/vx52rdvH/H5fAoNDa01Vplz584Rn8+noKAgunjxInl4eHAzvBXFGPVHydO+UQgICCAvLy+SSqXcsiVLltCoUaNqXXfv3r3k7e1NZWVlb7KJDYJSR+jKlStkYWFBUVFRVWISiYREIhH394IFC2jkyJFEVDUxKSpbkYRWrFjBxSsnpqNHj5KtrS0lJycTEdE///xDfD6fU0NUZseOHWRubk579+6t88HKzMyk/v3708SJE8nJyYnS09NJIBBQ586dKSwsjCv3xRdf0KhRoxTGqttnkyZNopkzZ3LLzp07Rw4ODgpjDPXwtiUmHx8fsra2pnHjxtFvv/1GWVlZVdYrLS2l0aNHU3BwMF2+fJnc3d3J0dGRdu7cKVfX24JSt3LOzs4YNGgQxo0bh/nz5yM1NZWL8Xg86OrqIjMzExs2bEB4eHiN9ShTVtEcpvj4eJiZmcHExARAucnPxMQEiYmJ1ZafMWMGLl68iFu3bmHYsGE4cuRIrS+ZrGDr1q3cu70qePr0KaRSKezs7LhlLi4uSEtLUxirTH5+PlJSUuDq6sot4/P50NDQUBhjvJ8MHDgQS5cuhYeHB/bv3w9vb+8qt/ZJSUnIyMiAs7MzAgMD4evri+3bt2P79u148OBBI7VcdZRKTEZGRtixYwe2b9+O2NhY9OvXD2fPngUApKamws/PD56enhAKhXJfqArov/OSlCmriOLiYhgaGkJXVxcAoKenB0NDQ4VDDmxsbLB161bs2bMHN2/exLBhwxAcHIzS0tIa13n06BFOnz6NZcuWwcDAgFsuFouhra0t95JKQ0NDyGQyhbHKSCQSSCQSzmwIlPcX6OjoKIwx3k98fHwwZ84czJs3D+vWrUN6ejqePXsmVyYqKgoODg5o27YtysrK0L17d3Tq1AmGhoYoKChopJarjtLjmLS0tODt7Y2YmBgMGjQIv/76KyQSCfbu3Yvs7GzExcVhxYoVyMnJ4dbh8XjQ1tZGVlYWACgsqwx2dnZITU3l6svMzERaWhr3xltFWFhYYOPGjQgJCcHjx48xcuTIGn9JDh48CD6fj169esktb9++PUpLS+Wugu7fvw9jY2OFsco0b96ck39V8PTpUxQVFSmMMRjPnz8Hj8fj3uoMAIWFhYiMjMSIESPQvn17jBw5Et7e3ujTpw/4fD6cnJwascWqoVRiKi0tRXR0NEQiEQwMDGBqagqRSASpVAqBQAA9PT3o6ekhJiYG9+7d466QKq5oHj16BAAKyyqDp6cniAiRkZEAgMjISPB4PHh6eipdR/v27REYGIgjR47AwsKiSjw1NRXh4eGYNm0a9+YLIoJUKoW9vT26dOmCP//8E2KxGC9evMCpU6cwYsQIhTGg/Crsu+++w9OnT6Grq4uRI0ciMjIST548gUQiwbFjx2BjY6Mwxnj3+eabb3Dy5EluqMDrPHz4EJs3b8bHH38MMzMzbrmRkRGioqIwcuRIAMDixYtx+fJlhIWFYdeuXXJX/W8NynREZWVl0ciRI8nS0pKcnZ2Jz+dTREQEERGdOnWK2rZtSw4ODtS7d2/avHkzmZmZ0YYNG4iIaPHixTRw4EAqKSlRWLaio3vlypXcdit3fhMRHTt2jCwtLcnR0ZEsLS3pxIkTNbZ78+bN5OHhUe2/oUOH0u3bt6usc+nSJWrRokUVN7O1tTURlXe4u7m5kbm5ObVt25amTp1K+fn5tcY2btxIenp6XOd4YWEhzZ49m9q0aUMWFhbk5ORECQkJtcYY9UfJ075JUFRURPv376fp06eTiYkJ+fr6NsoruxuaOql1nzx5guzsbDg6OsoNkMzIyOCWa2lpITMzE7q6utXextSlbE2IRCKkpKTAxsbmjQ8ki4yMxIoVKxAeHg5TU1MA5eObHj9+jGbNmnEd8RXUFCstLcWLFy9gZWUl92uYmZmJvLw82NnZVXErK4oxVOdt8jHl5uZi8+bNMDQ0hJeXF7p06dLYTWoQmPO7FqpLTIy3m7cpMb2vsMRUC4WFhXjx4gX4fD60tNiLi98FWGJq+rDExHjvYImp6cNEcQwGo8nBEhODwWhysMTEYLzlMLUuQyHPnz/H+vXrmaKE0SAwtS5Djo0bN2LatGlyv0rp6en4/PPP8fvvv+Pp06cK1z9x4gQ2bNigcI4fg1Eb77JalyUmFSgqKkJubi7393/+8x9Mnz4d1tbW+Ouvv9C1a1eF6//999/466+/1D7/7fHjx7h69apa62Q0DPHx8QgMDIS3t7ecVlcmkyEsLAwfffQRrKysMGDAAMTExAAAU+syFNOiRQscPXoULVq0UKr8xo0b1br9Bw8eYPPmzcjKysKyZcvUWjejYahJrZuZmYnjx49j5syZsLGxwerVq/H111/jzJkz77Rat86ThnJycmj27Nn0/fffc8sePnxIEyZMIHt7e/rXv/5Fd+/eVSpWmcLCQvL396fu3btTnz596ODBg5zkSlFMVeLj42nEiBFkaWlJffv2pWPHjnF1pqWl0axZs8je3p7c3Nzo1KlT3Hr+/v40YsQIpcqePHmSpk2bRlOnTiVXV1eKj4+nkydP0tKlS6moqIiIiEpKSmj16tXk5OREAwcOpNOnTyvd/mnTptGYMWPo0qVLCvfHiRMn6JNPPpH797qU7+jRo9S/f3/q2rUrff311yQUCrlYXY6hus6FN4kKp32DUZ0o7nV27dpFzs7OcrI4iURCUqmUBAIB9evXj/7555+Gau4bo063cjKZDD/99BN2796NhIQEAEBWVhamTp2KFi1aIDg4GBYWFvDx8cHz588VxqojMDAQkZGR+PHHHzFjxgysWrUKJ0+erDVWE//88w/mzZvHaVJep7CwEIsWLYKxsTFiY2Pxf//3f0hISEBxcTEKCwuxePFimJub4+jRo+jRowdWrVrFeb8r16OobHp6Og4fPgwzMzP8+OOPsLOzQ3p6Oq5du8a99WLdunU4fvw4fv31V3h7e2P+/PmIjY2t8XPFxcVh8uTJ2LRpE2bNmoU///wTHh4e1c5Ir6BTp06YPHky969Vq1a4c+cOgPJ3/C1btgwTJ07EL7/8gtjYWO5FDXU5huo8FxhVkUgkiIqKQvfu3dG2bVtuOY/Hg6amJi5dugRTU1OlNEBNnrpksejoaOrevTt5eXnR5MmTiYgoJCSEunfvzvm0s7OzydXVlXbu3KkwVhl1aWsrePjwIfXs2ZO+//57kkgkVeJ5eXnUq1cv+uqrr6qNFxYWcv8/c+YM2djYkEAgIKKqV0yKym7bto3c3d3lvOTbtm2jfv36UX5+PqWnp5OjoyPt27ePiMqNCsOHDyc/P79qfzUTExOpc+fONHPmzHrNMl+4cCH5+fnVqvKtyzFU17nwpqnjad+gKLpiOnjwIFlbW9P169erxN5LtS5QPss5MDAQU6ZMkcvI9+/fh4WFBZfBW7ZsCWtrayQmJiqMVUZd2lqgvBN46tSpGDduHBYtWlTtzHxjY2PMmDEDO3fuxNChQxEdHS33lM3Q0BClpaU4duwY1q9fD5FIVOO+qUvZyqSlpUEkEqFz584AyoV8rq6uuH//frWd4926dcO1a9fQrVs3jB49GoGBgdVeySlCKpUiPT0dHTt2rFXlW5djqK5zgVGVyMhIBAQEYOXKlejZs2eV+Hup1gWAkydPgojg6+srt7ykpARGRkbcBFdNTU00b94cxcXFCmOVUZe2FgCys7NRXFwMc3NzhboQX19fnD9/Hq1atcLo0aMREBAAsViM4uJi/PDDD+jZsyeOHDmC/v37czrfytSlbHWUlpaCx+PByMiIW9aqVSuIxWKUlZVVu06zZs0wf/58REREwNzcHN7e3li5ciVevnyp1DafPXuGtLQ0uLu716ryrcsxVNe5wPgfUqkUu3fvxty5c/H1119j/PjxKC4urnLuv5dqXaFQiD179sDHxwctW7aUi1lbW0MgECAvLw9AeZ9LUlISbG1tFcYqoy5tLVD+jq7ffvsNa9eulXsnXXW4uLjgyJEj2Lp1Kw4dOoSUlBTcvn0be/bsQXBwMA4fPgx9fX25qyAdHR3k5+ejpKSk1rK1YWpqColEwlk+AeDGjRswMzOT06dWh4GBAaZPn44zZ86gc+fO8PHxwe+//17rNu/cuQMej4euXbvWqvKtyzFU17nA+B+ZmZnYuHEjBAIB/Pz8YGhoiFatWiEiIoIr896qdc+ePYuSkhIMGzYMEokEMpkMMpkMUqkUnp6eyM/P596Ye/nyZWRlZWHo0KEKY4C8brY+2trq6N27N3799VccPHiwxg7WuLg4pKenAwCn2S0rK8PLly8hFothZGSEjIwMhIWFyc1Ib9myJV6+fAmhUFhr2dqwt7eHu7s7jhw5ApFIhAcPHuD69esYO3as0poVXV1dTJw4EREREfj444/Ly0WIAAAXdUlEQVQVlq1Q9bq7u6NDhw61qnxrO4bh4eEICgpCaWlpvc4FRjmV1bqmpqZISkoClb9qDUQEkUgELy8vbp33Vq27cuXKKqpZADRhwgQiKu+UMzExIT6fT+3ataNdu3Zx6yqKVdbNqqqtVQWpVErr168nU1NT6tGjB5mZmdGKFSuotLSUnj9/Tu7u7mRmZkaOjo70448/kpOTE40ZM4YyMzMpKiqKrKys6Pbt27WWra3zm6i8479Pnz5kY2NDpqam9OWXX8q9f+91rl27RoMHD65RGbx9+3aFn/v69etkb29PsbGx3LLaVL41HcOioiIaOHAgOTo6cp3aqp4LDYmSpz2jEVHJx7R48WIUFhZi586d3LLi4mKkpKSAz+fLaXcVxarTzaqira0PQqEQycnJMDc3l6uzuLgYjx49QseOHWFsbIyioiIIhUI5CbwqZWtCJpNxo3bbtWunls9WGYlEgtmzZ0MoFOLgwYNV+sIUqXxrOoavXr2CTCZD+/btay1bW6yhYD6mpo/aEhOj6RMaGoolS5YgJCQE7u7ujd2cRoMlpqaPSonpxYsXIKI6XREwGp99+/ahtLQUs2bNauymNCosMTV9mFqX8d7BElPTh9kFGAxGk4MlJgaD0eRgiYnBeMthal2GQphal9GQMLUuQw6m1mU0BZhalyEHU+sy1E1Nal2g3BwwceJEODg4YMyYMbh37x4AptZl1AJT6zLqS01q3QrBnrOzM4KDg/HHH3/Ax8cH4eHhTK2bkpJC48ePl9OyTpgwgVJTU4mIqXXfBrVuWVkZHTt2jL744gv67LPPKCoqSi6uqlr3bdTuKnnaNwqVRXHKCPbeW7Vuq1atMG7cOE7L2q9fP8TFxUEkEjG17lui1pXJZBCJRGjevDkSEhLk+sFUVesy7e6bRxnB3nuv1q3g7Nmz5OLiQi9evGBq3VrKNjW1rlAopN69e9Pu3buJiOql1n1btbsqnvYNQuUrpi+++IK8vb3lyvj6+tL06dPllr23at3XefnyJYyMjNCsWTOm1q1j2co0hlr3deqj1mXa3TePsoK991atW4FMJsOFCxfg5uYGIyMjptZ9C9W6r1MftS7T7r55lBXsvZdq3dfJyMhAYmIiPD09ATC17tuo1n2d+qh1mXb3zdO5c2f4+/tj/vz5sLGxwbRp0/DVV1/BxcWFK/PeqnVf5+LFi9DU1OQu/Zla9+1S61a3rqpqXabdVT+V1boAMHHiRDx+/BihoaEQCASYPn263DrvrVq3goKCAvL09KTVq1fLLWdq3bdHrVu585tIdbWuolhT1u7W8bRnNAJ1OkJHjhwhe3v7asdJFBUVUWJiotwTqtpiIpGIBAKB3FMDqVRKSUlJ3Mn8OopiqpKXl0dxcXFV6iwqKqI7d+5QXl4eEZV/eZ89e1ZtHXUpWxNSqZSSk5MpMzNThU+hHjIyMuiff/6p9imlKsc3KyuLMjIy6l2PumGJqemjtCju+fPn8PLywvjx4/HVV1+92cs4BuMNwkRxTR+l+5iys7MxZMgQzJw58022h8FgMJhal/H+wa6Ymj7MLsBgMJocLDExGIwmB0tMDAajycESE4PxllExbaoCqVQq5/x+F2CJqYFgPnCGOjh06BBsbGxgbW2NXr16wcvLC05OTvDy8nqn5hayxKRmmA+c8abIyclBUFAQdu7ciRs3boCI4OvriwEDBmDIkCFv59STGmCJSc00VR94QUEBzpw5o9Y6GepHLBZjxYoV+PTTT+X+hYeHQ1NTExoaGigpKYFIJIKmpiZ0dHTw4MEDDBo0qLGbrlaY8/sN09g+8Ly8POzatQuRkZEYO3asWutmqB8ej4fBgwejW7duAMoT1YYNG5CRkYGWLVti4cKFWLRoEfLz87FgwQIUFhaiZcuWcHBwaOSWqxll567cuXOHvvnmGxo3bhwFBATIxVR1OdfF493QPvDc3Fz68ssvyc7Ojrp06UL+/v5UUFBARG+HDzwrK4tWr15NgwcPph07diicf1abDzwmJoaGDx/O+d5fn8TdED5wdR/fOpz2jU5mZia5ublRaGgot0wqlZJEIiGJREKTJ09+Y6bPxkTpW7nq3uIA1M/lXBePd0P6wAEgKCgIp0+fRkhICA4fPgyxWIy0tLQm7wPPyMhAQEAApkyZgo4dO+LkyZOYMWMGDA0Na1xHkQ8cKLcjJicnY+rUqZgzZw6nVmkIHzig2vF9V6jwfrVv355bpqmpCR6Ph5SUFKSlpcHDw6MRW/iGqGsmq8tbHBTF6uLxbmgfOBHRqlWrqGfPnlVmxxM1XR94YWEhTZgwgdzc3OjOnTs1fv6aqE6JQkS0fv168vT0pJKSErnlDeEDV+X41oYKp32jcfjwYXJ3d6esrKwqsaCgIJo4cSI9e/aMJk+eTFZWVjR79my58+ltpd6d36q6nOvi8W5oHzgAeHt7o6SkBH369MG2bdtQWFjIxZqqD9zQ0BDBwcH47rvvuKumO3fuKL29mnj16hVatGhR5V1lDeEDr+vxfdeIiorCBx98wO2bCkQiESIiIjB8+HDs2rULMpkMUVFRePbsGf74449Gaq36qHdiUtXlXBePd2P4wLt06YLo6GhMmjQJ3377LUaOHImnT582eR94RefpiRMnMGPGDKxduxYTJkzA9evXld5uZbKzsxEfHw9vb29s376duxVtCB94XY/vu4RAIEBcXBw++eSTKrH79+8jOzsbvXv3Rk5ODhwdHWFvbw8+n4/s7OxGaK16qXdiUtXlXBePd2P5wNu2bYvAwEBcunQJL168wJkzZ94aH7impib69euHP//8E1988QW2bt2KefPmKb3t1xk4cCCWLl0KDw8P7N+/H97e3vjPf/7TID7wuh7fd4k///wTrVu3Rr9+/arEoqKi0KlTJ5ibm2Py5MkICQlBly5dcOXKlXfi6Wu9E5OqLufaPN6N7QN/+vQpd5XRrl07NGvWDCKR6K3zgQOAm5sbDhw4gICAAKXXeR0fHx/MmTMH8+bNw7p165Ceno5nz541iA9cleP7LvDkyRMcPHgQn3/+ebVDTZYvX46dO3dCU1MTbm5uiI2NxYEDB3D58mV06tSpEVqsZuraKVW585tIdZezIo93Y/rAicofkTs4OFDXrl3J1taWBg0aROnp6U3aB56bm0vTpk2r0Qc+Y8YMhZ+5ps7v1zlw4ADZ29tTeno6ETWMD1zdx1eF075BKSsro7lz59LgwYPlXtX+PqG2I6Sqy7kmj3dT8IGXlpZSYmJiFQ/2++gDJypPED169KCFCxfKHZeG8IGr8/g29cSUl5dHK1eupOvXrzd2UxoNZrBkKKS4uBhHjx7F5cuXERERgWHDhmHTpk1o1apVYzdNZZjBsunDpqQwFCISifD48WPY2dnh3Llz6NKlS2M3ifEewK6YGO8d7Iqp6cPsAgwGo8nBEhODwWhysMTEYLxlMLUuQ20wtS5DHTC1LkMlmFqX8aZgal2GyjC1LkNdyGQy/PLLL/Dz88OrV6+YWpehPphal6Eqly5dQmBgIFq2bAmRSAQLC4v3Rq2r9BVTfHw8AgMD4e3tjW+++UYudvXqVYwYMYITp69Zs4aLJSUlYeLEiXBwcMCYMWNw7949LlZUVISAgAA4OTmhb9++CAkJqVFnoahsXepRlry8PCxduhT29vbo2rUrAgICOCfTkydPMHv2bDg4OKBnz544ffp0jfU8efIEX331VbVlT506BV9fX0ybNg09evRAQkICTp06hWXLlnG3ciKRCGvWrIGzszM8PT0RERGhVPtfvXqFNWvWwNvbG8bGxggLC8OsWbOqLVtQUIA1a9bggw8+gLW1NaZPn46MjAwurugYqhqrjLrOk3eFrKwsBAYGVrlFGzlyJAQCAV69egV/f39uNH5ddDpvA/VW6wKqqVcBptZtKmrdmJgYpKen46effsLWrVtx4cIF7NixA4Dq+lym1q0fW7duhaGhIcaMGVMlxtS61VCdXUAV9SpT6zY9tW7FNkaMGEH//ve/iUh1fS5T66pOUlISubi40MWLF+ns2bPk5OTE2Rxeh6l1a0EV9SpT69ZOY6h1BQIBHj58iD59+gBQXZ/L1Lqqc/DgQfD5fPTq1avGMkytqwSqqFeZWrd2GlqtW1paivXr16Njx44YPHgwANX1uUytqxqpqakIDw/HtGnTwOPxIJVKQUTcrX0FTK2rBKqoV5lat3YaUq0rFouxZs0a3L59Gz/++CO3/1TV5zK1rmo8ffoUqamp8PLygra2Nj799FMkJibC09NTrhxT6yqBKupVptatnYZS6+bk5GD+/Pk4ffo09u3bB2tray6BqqrPZWpd1fDw8IBQKASVSxxx9uxZuLq6IiYmRq4cU+tWorrO79epi3qVqXWbhlr3+PHjpKOjQwC4f507d+biqqqTmVq3/pw9e5ZcXV3p+fPnjd2UBkWtR0gV9SpT69ZOU1DrqqpOZmrd+lFQUEBJSUlUVlbW2E1pUOotinsX1auMdxsmimv61HtKClOvMhgMdcPUuoz3DnbF1PRhdgEGg9HkaLTEdP78eRw4cOCdHSjHYDBU540mpoKCAnh5eeHw4cNyy0+fPg0fHx9ERUUpFKIVFxdj3bp1CAsLe5PNZDAYTYw3mphkMhmys7NRUlLCLYuNjcXSpUuxfPly7Nq1S266RWUKCgoQFRWF27dvv8lmMhiMOiASid64YbXBRXE9e/bEjRs3FGo4Kmjfvj03GpjBYDQNVq1ahZycHOzZs+eNbUOpKyaZTIbg4GC4ubmBz+fD29sbSUlJXPzcuXPw8vKCtbU1xo4dq3Dm94ULF+Dt7V2lrFQqxapVq7BkyRIMHjwY48aNQ35+PlatWiU3p00gEGDKlCno1KkTpk6dqpZZ5klJSZgyZQo3/WHLli3cWydqk5QdO3YMAwYMQLdu3bB8+XK5lw0oilVGXfUwVCchIQGfffYZrKys0K9fPxw/fpw71mKxGFu2bEGPHj3wwQcfYO/evdzE2lOnTsHPzw9LlixBly5duHPI398fLi4usLOzw3fffQexWFzjthXJB0+cOCEnD3z58iX8/PwQHx+v8vZfvHiBWbNmwdHREZ988glu3boF4H/fw4CAAMyYMQOdO3dG165dOWPBDz/8gNDQUJw/fx5jx47FgwcPAKguNKwRZUZhxsXFkbm5Oe3atYuePXtGW7ZsoeDgYC42cOBAOnz4MF27do2cnZ1p8eLFREQkFArJ3d2d9u7dW2vZsrIyGjJkCPH5fNq/fz/Fx8dzy1avXk1ERDk5OdS/f3+aPn063bt3j3x8fGjgwIE1+mdiYmLoyy+/rHX6wooVK2jdunV08+ZNWrt2LXXo0IGuXr1KRERLly4ld3d3On/+PO3bt4/4fD6FhoYSEdG5c+eIz+dTUFAQXbx4kTw8PGjOnDm1xiqjrnoYylHdaV9QUEADBgygKVOm0LNnzygiIoL8/f2poKCAiIi+/fZbcnFxoevXr1N4eDjx+Xw6deoUEZVPIzI2NqaAgABKTEykVatWkYGBAS1btowSExMpKCiIrKysKD4+vtr2FBQU0KhRo2j16tWUmJhIc+bMIRcXF8rKyiIioh9++EFumlJycjLZ2dnRuXPnVNp+bm4ueXp60vTp00kgENCKFSvI1dWVXrx4wX3nHBwcaOfOnXT//n2aN28eDRo0iEQiEb148YJGjRpFH330EV28eJGb0eDv708uLi509epV2r59O1lbW3PfIZWOkTKFrly5QhYWFhQVFVUlJpFI5OZuLViwgEaOHElEVROTorIVO2TFihVcvHJiOnr0KNna2lJycjIRlU+B4fP5dPz48WrbnZeXR+PGjaOpU6dyJ1htPHz4kOzs7Ojs2bMKJWUSiYQmTZpEM2fO5GLnzp0jBwcHhbHq9p866mEoT3WJKS8vj3r16kVfffVVFXlgWloa2dvb0/r160kgEFBycjINGTKEfH19iaiq8O/s2bNkZ2dHjx8/JqLy89TOzo6io6NrbJMioaAyiaku2z906BBZWVlRdHQ0CQQCunDhAllZWdHx48e579zKlSu59hw8eJC6du3KTSHy8/OjCRMmcPG6Cg2VQalbOWdnZwwaNAjjxo3D/PnzkZqaysV4PB50dXWRmZmJDRs2IDw8vMZ6lCmroaFR4/rx8fEwMzODiYkJAMDExAQmJibVyscAwNjYGEFBQSguLsaiRYuUevPItWvXoKWlhU6dOimUlOXn5yMlJQWurq5cjM/nQ0NDQ2GsMuqqh1E/jI2NMWPGDOzcuRNDhw5FdHQ0dxuXlpaGnJwchISEYOzYsRg/fjxycnKgr6+v1IsmlTle9REK1nX7CQkJyM/Px7JlyzB27Fh8+eWXaNOmTY2fpbb211VoqAxKJSYjIyPs2LED27dvR2xsLPr164ezZ88CKBdb+fn5wdPTE0KhUO5LVAH9d5StMmUVUVxcDENDQ062pqenB0NDQ4VPCPT19WFmZoaMjIxanySkpKRg06ZNmDp1KiwtLRVKyiQSCSQSCZo1a8bFdHV1oaOjozBWGXXVw6g/vr6+OH/+PFq1aoXRo0cjICAAYrEYUqkUzZo1Q3BwMG7evMn9++WXX+qkn6mJ+goF60pZWRmnUnn986jqcVJFaFgbSg8X0NLSgre3N2JiYjBo0CD8+uuvkEgk2Lt3L7KzsxEXF4cVK1YgJyeHW4fH40FbW5sT/isqqwx2dnZITU3l6svMzERaWlq18jGgfId9/fXXSEpKwu7duzl1a3U8f/4cM2fORI8ePTB37lwAigV1zZs3R5s2bXD37l0u9vTpUxQVFSmMVUZd9TDUg4uLC44cOYKtW7fi0KFDSElJQYcOHSCVSvH48eM3ss36CgXrio2NDdLT0+v8/auJ+ggNa0KpxFRaWoro6GiIRCIYGBjA1NQUIpEIUqkUAoEAenp60NPTQ0xMDO7du8ddIVVc0VQ0WFFZZfD09AQRITIyEgAQGRkJHo9Xxe5XwV9//YWnT59iz549aN++fY313rx5E//6179gaWmJTZs2QVNTE2KxWKGkTFdXFyNHjkRkZCSePHkCiUSCY8eOwcbGRmEMKDc0btmyBRcuXKhXPQz1EhcXh/T0dACAhYUFgPKrC1tbW7i6uuLw4cMQiUQoLS3FgQMHauxCqCu1CQX19fVRVFTEbTsyMhL5+fkqz/fr378/pFIp9wLUly9fYvv27RAKhUqtr6WlBZFIxN3qqktoKIcyHVFZWVk0cuRIsrS0JGdnZ+Lz+RQREUFERKdOnaK2bduSg4MD9e7dmzZv3kxmZma0YcMGIiJavHgxDRw4kEpKShSWra7TrXLnNxHRsWPHyNLSkhwdHcnS0pJOnDihUufa6/j6+spJ0gDQrFmziEixpKywsJBmz55Nbdq0IQsLC3JycqKEhIRaYzdu3KDWrVtz4jZV62GoRnWnvVQqpfXr15OpqSn16NGDzMzMaMWKFVRaWkpE5eeBi4sL8fl8srKyorFjx9b4tpvKnc8VD1Rq6vyuTSh48+ZNsrS0JBsbGzIzM6MRI0aQvb09J9NTZfu///47dejQgbp06UKWlpb03XffUWFhYbXfw5CQELnO771791LLli3J1dWVywN1ERoqQ53sAk+ePEF2djYcHR3lBkhmZGRwy7W0tJCZmQldXd1qvcx1KVsTIpEIKSkpsLGxqfJmljeBTCbD48eP0axZM67j/XUyMzORl5cHOzu7Ki84qCmWlpaGdu3ayb3MUJV6GHVHkV1AKBQiOTkZ5ubmVY61VCpFcnIyWrdurbBbQBWKi4vx6NEjdOzYEcbGxigqKoJQKISZmRmA8jcRpaamomPHjmjXrh1yc3Ohra0t1/9YV4qKiriukLr2aVV0b1haWkJTs/zGSyaTQSAQoHnz5mjXrp3K7QKY9oTxHsK0J00fpj1hMBhNDpaYGAxGk0Ouy5wN3GO8L7BzvXGp7VZaLjGx+24Gg9EUYLdyDAajycESE4PBaHKwxMRgMJocLDExGIwmB0tMDAajyfH/VEsX9cHoe2wAAAAASUVORK5CYII=)
+# Faça um algoritmo que leia o salário atual de um funcionário e escreva o índice de aumento e o valor do salário corrigido.
+"""
+
+# 28. Uma empresa decidiu conceder um aumento de salário a seus funcionários de acordo com a tabela:
+# Faça um algoritmo que leia o salário atual de um funcionário e escreva o índice de aumento e o valor do salário corrigido.
+
+# entrada
+salario = float(input("Digite o valor do salário: "))
+
+# processamento
+if salario <= 400:
+  iA = (salario*0.15)
+  aSalario = salario+iA
+  txt = f"O aumento salarial deve ser de 15% (R${iA:.2f}) resultando em: R${aSalario:.2f}"
+elif salario <=700:
+  iA = (salario*0.12)
+  aSalario = salario+iA
+  txt = f"O aumento salarial deve ser de 12% (R${iA:.2f}) resultando em: R${aSalario:.2f}"
+elif salario <=1000:
+  iA = (salario*0.10)
+  aSalario = salario+iA
+  txt = f"O aumento salarial deve ser de 10% (R${iA:.2f}) resultando em: R${aSalario:.2f}"
+elif salario <=1500:
+  iA = (salario*0.07)
+  aSalario = salario+iA
+  txt = f"O aumento salarial deve ser de 7% (R${iA:.2f}) resultando em: R${aSalario:.2f}"
+elif salario <=2000:
+  iA = (salario*0.04)
+  aSalario = salario+iA
+  txt = f"O aumento salarial deve ser de 4% (R${iA:.2f}) resultando em: R${aSalario:.2f}"
+elif salario >2000:
+  iA = (salario*0)
+  aSalario = salario+iA
+  txt = f"O aumento salarial deve ser de 0% (R${iA:.2f}) resultando em: R${aSalario:.2f}"
+
+# saida
+print(txt)
+
+"""# 29. Faça um algoritmo para calcular o reajuste salarial de um funcionário, de acordo com os critérios abaixo:
+# • se salário é inferior a R 10.000,00 deve ter um reajuste de 55%
+# • se salário está entre R 10.000,00 inclusive e R$ 25.000,00 inclusive deve ter um reajuste de 20%
+# • se salário é superior a R 25.000,00 deve ter um reajuste de 20%.
+"""
+
+# 29. Faça um algoritmo para calcular o reajuste salarial de um funcionário, de acordo com os critérios abaixo:
+# • se salário é inferior a R$10.000,00 deve ter um reajuste de 55%
+# • se salário está entre R$10.000,00 inclusive e R$ 25.000,00 inclusive deve ter um reajuste de 20%
+# • se salário é superior a R$25.000,00 deve ter um reajuste de 20%.
+
+# entrada
+salario = float(input("Digite o valor do salário: "))
+
+# processamento
+if salario < 10000:
+  reajuste = salario*0.55
+  salarioR = salario+reajuste
+  txt = f"O reajuste deve ser de 55% (R${reajuste:.2f}) resultando em: R${salarioR:.2f}"
+elif salario > 10000 and salario < 25000:
+  reajuste = salario*0.20
+  salarioR = salario+reajuste
+  txt = f"O reajuste deve ser de 20% (R${reajuste:.2f}) resultando em: R${salarioR:.2f}"
+elif salario > 25000:
+  reajuste = salario*0.20
+  salarioR = salario+reajuste
+  txt = f"O reajuste deve ser de 20% (R${reajuste:.2f}) resultando em: R${salarioR:.2f}"
+
+# saida
+print(txt)
+
+"""# 30. Faça um algoritmo para controle de temperatura de um forno que derrete alumínio. O programa deverá perguntar qual a temperatura que o alumínio deverá ser trabalhado e operar nas seguintes condições:
+# • Se temperatura for inferior ou igual 500°C enviar uma mensagem para tela "Temperatura Inválida";
+# • Se temperatura for menor do que 700°C enviar uma mensagem para tela "Aquecimento Ligado em 100%";
+# • Se temperatura for menor do que 735°C enviar uma mensagem para tela "Aquecimento Ligado em 50%";
+# • Se temperatura for maior ou igual 735°C enviar uma mensagem para tela "Aquecimento Desligado";
+# • Se temperatura for maior do que 780°C enviar uma mensagem para tela "Superaquecimento";
+# Os valores digitados devem ser inteiros e inferiores a 1000.
+"""
+
+# 30. Faça um algoritmo para controle de temperatura de um forno que derrete alumínio. O programa deverá perguntar qual a temperatura que o alumínio deverá
+# ser trabalhado e operar nas seguintes condições:
+# • Se temperatura for inferior ou igual 500°C enviar uma mensagem para tela "Temperatura Inválida";
+# • Se temperatura for menor do que 700°C enviar uma mensagem para tela "Aquecimento Ligado em 100%";
+# • Se temperatura for menor do que 735°C enviar uma mensagem para tela "Aquecimento Ligado em 50%";
+# • Se temperatura for maior ou igual 735°C enviar uma mensagem para tela "Aquecimento Desligado";
+# • Se temperatura for maior do que 780°C enviar uma mensagem para tela "Superaquecimento";
+# Os valores digitados devem ser inteiros e inferiores a 1000.
+
+# entrada
+temp = float(input("Qual temperatura o alumínio deverá ser trabalhado?\n(Os valores digitados devem ser em °C, inteiros e inferiores a 1000)\n"))
+
+# processamento
+
+if temp < 500:
+  txt = f"({temp}°C) Temperatura Inválida."
+elif temp < 700:
+  txt = f"({temp}°C) Aquecimento Ligado em 100%."
+elif temp < 735:
+  txt = f"({temp}°C) Aquecimento Ligado em 50%."
+elif temp >= 735 and temp <= 780:
+  txt = f"({temp}°C) Aquecimento Desligado."
+elif temp > 780:
+  txt = f"({temp}°C) Superaquecimento."
+
+# saida
+print(txt)
+
+"""# 31. Faça um algoritmo que permita a entrada de um valor de 1 a 4. Em seguida, leia dois valores. Calcular e imprimir:
+# • Se valor digitado for 0, calcular e exibir a soma dos números
+# • Se valor digitado for 1, calcular e exibir a subtração dos números
+# • Se valor digitado for 2, calcular e exibir a multiplicação dos números
+# • Se valor digitado for 3, calcular e exibir a divisão dos números
+# • Se valor digitado for 4, calcular e exibir a média dos números
+# • Diferente de 1,2,3 ou 4, exibir a mensagem “Valor errado. Programa encerrado sem cálculos”
+"""
+
+# 31. Faça um algoritmo que permita a entrada de um valor de 1 a 4. Em seguida, leia dois valores. Calcular e imprimir:
+# • Se valor digitado for 0, calcular e exibir a soma dos números
+# • Se valor digitado for 1, calcular e exibir a subtração dos números
+# • Se valor digitado for 2, calcular e exibir a multiplicação dos números
+# • Se valor digitado for 3, calcular e exibir a divisão dos números
+# • Se valor digitado for 4, calcular e exibir a média dos números
+# • Diferente de 1,2,3 ou 4, exibir a mensagem “Valor errado. Programa encerrado sem cálculos”
+
+# entrada
+valor = int(input("Digite um valor de 1 a 4: "))
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+
+# processamento
+if valor == 0:
+  soma = num1+num2
+  txt = f"Soma de (({num1})+({num2})) é: {soma}"
+elif valor ==1:
+  subtracao = num1-num2
+  txt = f"Subtração de (({num1})-({num2})) é: {subtracao}"
+elif valor ==2:
+  multiplicacao = num1*num2
+  txt = f"Multiplicação de (({num1})*({num2})) é: {multiplicacao}"
+elif valor ==3:
+  divisao = num1/num2
+  txt = f"Divisão de (({num1})/({num2})) é: {divisao}"
+elif valor ==4:
+  media = (num1+num2)/2
+  txt = f"Média de [(({num1}) + ({num2}))/2] é: {media}"
+else:
+  txt = f"Valor errado. Programa encerrado sem cálculos"
+
+# saida
+print(txt)
+
+"""# 32. Escrever um algoritmo que leia valores inteiros em duas variáveis distintas e se o resto da divisão da primeira pela segunda for 1 mostre a soma dessas variáveis mais o resto da divisão; se for 2 escreva se o primeiro e o segundo valor são pares ou ímpares; se for igual a 3 multiplique a soma dos valores lidos pelo primeiro; se for igual a 4 divida a soma dos números lidos pelo segundo, se este for diferente de zero. Em qualquer outra situação mostre o quadrado dos números lidos."""
+
+# 32. Escrever um algoritmo que leia valores inteiros em duas variáveis distintas e se o resto da divisão da primeira pela segunda for 1 mostre a soma dessas
+# variáveis mais o resto da divisão; se for 2 escreva se o primeiro e o segundo valor são pares ou ímpares; se for igual a 3 multiplique a soma dos valores lidos
+# pelo primeiro; se for igual a 4 divida a soma dos números lidos pelo segundo, se este for diferente de zero. Em qualquer outra situação mostre o quadrado dos
+# números lidos.
+
+# entrada
+num1 = int(input("Digite um valor inteiro: "))
+num2 = int(input("Digite outro valor inteiro: "))
+
+# processamento
+resto = num1%num2
+
+if resto == 1:
+  soma = num1+num2+resto
+  txt = f"a soma dos dois números mais o resto é ({num1}+{num2}+{resto}): {soma}"
+elif resto == 2:
+  par = num1%2
+  par1 = num2%2
+  if par == 0:
+    txt = f"O primeiro valor ({num1}) é par"
+  else:
+    txt = f"O primeiro valor ({num1}) é ímpar"
+  if par1 == 0:
+    txt = f"O segundo valor ({num2}) é par"
+  else:
+    txt = f"O segundo valor ({num2}) é ímpar"
+elif resto == 3:
+  soma = num1+num2
+  multiplicacao = soma * num1
+  txt = f"A multiplicação da soma dos dois valores pelo o primeiro valor é [(valor1+valor2)*valor1]: {multiplicacao}"
+elif resto == 4:
+  soma = num1+num2
+  if num2 != 0:
+    divisao = soma / num2
+    txt = f"A divisão da soma pelo segundo valor é: {divisao:.3f}"
+  else:
+    txt = f"A divisão da soma pelo segundo valor não é possível. Segundo valor é 0"
+else:
+  qNum1 = num1**2
+  qNum2 = num2**2
+  txt = f"O quadrado dos dois números são, respectivamente: {qNum1} e {qNum2}"
+
+# saida
+print(txt)
+
+"""# 33. Escreva um algoritmo que leia as idades de 2 homens e 2 mulheres (considere que as idades dos homens serão sempre diferentes, bem como as das mulheres). Calcule e escreva a soma das idades do homem mais velho com a mulher mais nova, e o produto das idades do homem mais novo com a mulher mais velha."""
+
+# 33. Escreva um algoritmo que leia as idades de 2 homens e 2 mulheres (considere que as idades dos
+# homens serão sempre diferentes, bem como as das mulheres). Calcule e escreva a soma das idades do
+# homem mais velho com a mulher mais nova, e o produto das idades do homem mais novo com a mulher mais
+# velha.
+
+# entrada
+iH1 = int(input("Digite a idade do primeiro homem: "))
+iH2 = int(input("Digite a idade do segundo homem: "))
+iM1 = int(input("Digite a idade da primeira mulher: "))
+iM2 = int(input("Digite a idade da segunda mulher: "))
+
+# processamento
+if iH1 == iH2 == iM1 == iM2 or iH1 == iH2 and iM1 == iM2:
+  print(f"----\nQue isso meu patrão, vamo com calma.\nDigite idades diferentes entre o mesmo sexo, tu meteu igual em tudo")
+elif iM1 == iM2:
+  print(f"----\nDigite idades diferentes para as mulheres.")
+elif iH1 == iH2:
+  print(f"----\nDigite idades diferentes para os homens.")
+else:
+  if iH1 > iH2:
+    if iM1 > iM2:
+      soma = iH1 + iM2
+      produto = iH2 * iM1
+      txt = f"----\nA soma das idades do homem mais velho ({iH1}) com a mulher mais nova ({iM2}) é: {soma}\nO produto das idades do homem mais novo ({iH2}) com a mulher mais velha ({iM1}) é: {produto}"
+    else:
+      soma = iH1 + iM1
+      produto = iH2 * iM2
+      txt = f"----\nA soma das idades do homem mais velho ({iH1}) com a mulher mais nova ({iM1}) é: {soma}\nO produto das idades do homem mais novo ({iH2}) com a mulher mais velha ({iM2}) é: {produto}"
+  else:
+    if iM1 > iM2:
+      soma = iH2 + iM2
+      produto = iH1 * iM1
+      txt = f"----\nA soma das idades do homem mais velho ({iH2}) com a mulher mais nova ({iM2}) é: {soma}\nO produto das idades do homem mais novo ({iH1}) com a mulher mais velha ({iM1}) é: {produto}"
+    else:
+      soma = iH2 + iM1
+      produto = iH1 * iM2
+      txt = f"----\nA soma das idades do homem mais velho ({iH2}) com a mulher mais nova ({iM1}) é: {soma}\nO produto das idades do homem mais novo ({iH1}) com a mulher mais velha ({iM2}) é: {produto}"
+
+  # saida
+  print(txt)
+
+"""# 34. Existem números de 4 dígitos (entre 1000 e 9999) que obedecem à seguinte característica: se dividirmos o número em dois números de dois dígitos, um composto pela dezena e pela unidade, e outro pelo milhar e pela centena, e, ao somarmos estes dois novos números gerando um terceiro, o quadrado deste terceiro número é exatamente o número original de quatro dígitos. Por exemplo: 2025 -> dividindo: 20 e 25 -> somando temos 45 -> 452 = 2025. Escreva um programa para ler um número e verificar se ele obedece a esta característica."""
+
+# 34. Existem números de 4 dígitos (entre 1000 e 9999) que obedecem à seguinte característica:
+# se dividirmos o número em dois números de dois dígitos, um composto pela dezena e pela unidade,
+# e outro pelo milhar e pela centena, e, ao somarmos estes dois novos números gerando um terceiro,
+# o quadrado deste terceiro número é exatamente o número original de quatro dígitos. Por exemplo:
+# 2025 -> dividindo: 20 e 25 -> somando temos 45 -> 45² = 2025. Escreva um programa para ler um número
+# e verificar se ele obedece a esta característica.
+
+# entrada
+num = int(input("Digite um número entre 1000 e 9999: "))
+
+# processamento
+if num < 1000 or num > 9999:
+  num1 = num // 100
+  num2 = num % 100
+  soma = (num1 + num2)
+  qSoma = soma**2
+  if qSoma == num:
+    txt = f"----\nQuadrado perfeito.\n{num} -> {num1} e {num2} -> somando temos {soma} -> {soma}² = {num}"
+  else:
+    txt = f"Número comum, continue tentando!"
+else:
+  txt = f"----\nDigite um número entre 1000 e 9999"
+# saida
+print(txt)
